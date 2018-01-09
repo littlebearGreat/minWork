@@ -1,0 +1,269 @@
+<!-- 用户详情页 -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>用户详情</title>
+	<link rel="stylesheet" href="css/user.css">
+	<script src="js/jquery.min.js"></script>
+	<script src="js/user.js"></script>
+</head>
+<body>
+	<div class="body">
+		<!-- 侧边栏 -->
+		<div class="sideBar">
+			<div class="logo"></div>
+			<ul>
+				<li>
+					<span class="side"></span>
+					<div>
+						<span class="icon userManage"></span>
+						<span class="text">用户管理</span>
+					</div>
+				</li>
+				<li class="active">
+					<span class="side"></span>
+					<div>
+						<span class="icon goodsManage"></span>
+						<span class="text">商品管理</span>
+					</div>
+				</li>
+				<li>
+					<span class="side"></span>
+					<div>
+						<span class="icon goodsCategoryM"></span>
+						<span class="text">商品分类管理</span>
+					</div>
+				</li>
+				<li>
+					<span class="side"></span>
+					<div>
+						<span class="icon orderManage"></span>
+						<span class="text">订单管理</span>
+					</div>
+				</li>
+				<li>
+					<span class="side"></span>
+					<div>
+						<span class="icon dataAnalysis"></span>
+						<span class="text">数据分析</span>
+					</div>
+				</li>
+			</ul>
+		</div>
+
+		<!-- 内容区 -->
+		<div class="contArea">
+			<!-- 头部 -->
+			<div class="title">
+				<div class="locate">
+					<span class="icon"></span>
+					<span class="text">当前位置：后台管理>用户管理>用户详情</span>
+				</div>
+				<div class="user">
+					<a href="javascript:;">
+						<span class="img"></span>
+						<span class="name">lay.Liu</span>
+					</a>
+				</div>
+				<div class="help">
+					<a href="javascript:;">
+						<span class="icon"></span>
+						<span class="text">帮助</span>
+					</a>
+				</div>
+			</div>
+			<!-- 内容 -->
+			<div class="cont">
+				<!-- 客户信息 -->
+				<div class="uesr">
+					<div class="tit">
+						<span></span>
+						<div>客户信息</div>
+					</div>
+					<table>
+						<thead>
+							<tr>
+								<th>用户姓名</th>
+								<th>区域</th>
+								<th>手机号码</th>
+								<th>地址</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>李先生</td>
+								<td>坪山区</td>
+								<td>13444466565</td>
+								<td>南连地铁站远洋新干线一期7栋709</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<!-- 订单列表 -->
+				<div class="list">
+					<div class="tit">
+						<span></span>
+						<div>订单列表</div>
+					</div>
+					<div class="searchBar">
+						<span class="tit">关键字：</span>
+						<input class="keyword" type="text" placeholder="请输入订单号、用户姓名、手机号码">
+						<span class="tit">类别：</span>
+						<div class="type">
+							<div>
+								<span></span>
+								<p>请选择</p>
+							</div>
+							<ul>
+								<li>类别1</li>
+								<li>类别2</li>
+								<li>类别3</li>
+							</ul>
+						</div>
+						<span class="tit">产品名称：</span>
+						<div class="goodsName">
+							<div>
+								<span></span>
+								<p>请选择</p>
+							</div>
+							<ul>
+								<li>产品1</li>
+								<li>产品2</li>
+								<li>产品3</li>
+							</ul>
+						</div>
+						<span class="tit">下单时间：</span>
+						<div class="time">
+							<input type="text">
+							<span class="icon"></span>
+						</div>
+						<span class="btn resize">重置</span>
+						<span class="btn search">搜索</span>
+					</div>
+					<table>
+						<thead>
+							<tr>
+								<th class="num">序号</th>
+								<th class="orderNum">订单号</th>
+								<th class="type">类别</th>
+								<th class="goodsName">产品名称</th>
+								<th class="information">产品简述</th>
+								<th class="price">报价</th>
+								<th class="userName">用户姓名</th>
+								<th class="userMobile">用户手机</th>
+								<th class="orderTime">下单时间</th>
+								<th class="appointTime">预约时间</th>
+								<th class="remarks">备注</th>
+								<th class="operate">操作</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td>ZS0000000001</td>
+								<td>维修类</td>
+								<td>显示器</td>
+								<td>TCL显示器</td>
+								<td>¥400-2000</td>
+								<td>李先生</td>
+								<td>13499880009</td>
+								<td>2017-11-17 12:20:30</td>
+								<td>2017-11-18 12:20:30</td>
+								<td>
+									<span class="search">
+										<a href="javascript:;"></a>
+									</span>
+								</td>
+								<td>
+									<span class="detail">
+										<a href="javascript:;"></a>
+									</span>
+									<span class="downLoad">
+										<a href="javascript:;"></a>
+									</span>
+								</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>ZS0000000001</td>
+								<td>维修类</td>
+								<td>显示器</td>
+								<td>TCL显示器</td>
+								<td>¥400-2000</td>
+								<td>李先生</td>
+								<td>13499880009</td>
+								<td>2017-11-17 12:20:30</td>
+								<td>2017-11-18 12:20:30</td>
+								<td>
+									<span class="search">
+										<a href="javascript:;"></a>
+									</span>
+								</td>
+								<td>
+									<span class="detail">
+										<a href="javascript:;"></a>
+									</span>
+									<span class="downLoad">
+										<a href="javascript:;"></a>
+									</span>
+								</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>ZS0000000001</td>
+								<td>维修类</td>
+								<td>显示器</td>
+								<td>TCL显示器</td>
+								<td>¥400-2000</td>
+								<td>李先生</td>
+								<td>13499880009</td>
+								<td>2017-11-17 12:20:30</td>
+								<td>2017-11-18 12:20:30</td>
+								<td>
+									<span class="search">
+										<a href="javascript:;"></a>
+									</span>
+								</td>
+								<td>
+									<span class="detail">
+										<a href="javascript:;"></a>
+									</span>
+									<span class="downLoad">
+										<a href="javascript:;"></a>
+									</span>
+								</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>ZS0000000001</td>
+								<td>维修类</td>
+								<td>显示器</td>
+								<td>TCL显示器</td>
+								<td>¥400-2000</td>
+								<td>李先生</td>
+								<td>13499880009</td>
+								<td>2017-11-17 12:20:30</td>
+								<td>2017-11-18 12:20:30</td>
+								<td>
+									<span class="search">
+										<a href="javascript:;"></a>
+									</span>
+								</td>
+								<td>
+									<span class="detail">
+										<a href="javascript:;"></a>
+									</span>
+									<span class="downLoad">
+										<a href="javascript:;"></a>
+									</span>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

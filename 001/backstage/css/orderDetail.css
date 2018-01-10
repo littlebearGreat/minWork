@@ -1,0 +1,267 @@
+/*orderDetail.css 订单详情样式表*/
+/*user.css*/
+/*样式初始化--开始*/
+body,ul,li,p{
+	margin: 0;
+	padding: 0;
+}
+body{
+	font-size: 0px;
+	min-width: 1920px;
+	font-family: Arial,'Times New Roman','Microsoft YaHei',SimHei;
+}
+ul{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+table th,
+table td{
+	text-align: center;
+}
+/*样式初始化--结束*/
+.body{
+	width: 1920px;
+	margin: 0 auto;
+}
+/*侧边栏*/
+.sideBar{
+	display: inline-block;
+	width: 240px;
+	background-color: #0097ed;
+	color: #fff;
+	overflow: hidden;
+	vertical-align: top;
+	height: 1000px;
+}
+.sideBar .logo{
+	height: 75px;
+	background: url(../images/logo.png) no-repeat;
+	background-position: center center;
+}
+.sideBar ul{
+	margin-top: 12px;
+}
+.sideBar li{
+	height: 45px;
+	margin-bottom: 20px;
+	cursor: pointer;
+}
+.sideBar .side{
+	float: left;
+	height: 100%;
+	width: 5px;
+}
+.sideBar li>div{
+	height: 100%;
+}
+.sideBar .icon{
+	display: inline-block;
+	height: 17px;
+	width: 17px;
+	margin-top: 15px;
+	vertical-align: top;
+	margin-left: 43px;
+	margin-right: 6px;
+	background: #fff;
+}
+.sideBar .userManage{
+	background: url(../images/user.png) no-repeat;
+	background-size: 100% 100%;
+}
+.sideBar .goodsManage{
+	background: url(../images/goods.png) no-repeat;
+	background-size: 100% 100%;
+}
+.sideBar .goodsCategoryM{
+	background: url(../images/goodsType.png) no-repeat;
+	background-size: 100% 100%;
+}
+.sideBar .orderManage{
+	background: url(../images/order.png) no-repeat;
+	background-size: 100% 100%;
+}
+.sideBar .dataAnalysis{
+	background: url(../images/dataAnalysis.png) no-repeat;
+	background-size: 100% 100%;
+}
+.sideBar .text{
+	display: inline-block;
+	height: 16px;
+	line-height: 16px;
+	font-size: 12px;
+	vertical-align: top;
+	margin-top: 15px;
+}
+.sideBar .active .side{
+	background-color: #ffc104;
+}
+.sideBar .active>div{
+	background-color: #16aaff;
+}
+
+/*内容区*/
+.contArea{
+	display: inline-block;
+	width: 1680px;
+	height: 1000px;
+	vertical-align: top;
+	overflow: hidden;
+	background-color: #f0f1f6;
+}
+/*头部*/
+.contArea .title{
+	height: 75px;
+	background-color: #fff;
+}
+.contArea .title .locate{
+	float: left;
+}
+.contArea .title .locate .icon{
+	display: inline-block;
+	width: 19px;
+	height: 28px;
+	margin-top: 23px;
+	margin-left: 28px;
+	margin-right: 14px;
+	vertical-align: top;
+	background: url(../images/locate.png) no-repeat;
+	background-size: 100% 100%;
+}
+.contArea .title .locate .text{
+	display: inline-block;
+	height: 75px;
+	font-size: 12px;
+	color: #8f8f8f;
+	line-height: 75px;
+	vertical-align: top;
+}
+.contArea .title .user{
+	float: right;
+	display: inline-block;
+	height: 46px;
+	margin-top: 14px;
+	vertical-align: top;
+	margin-right: 80px;
+}
+.contArea .title .user a{
+	display: block;
+	height: 100%;
+}
+.contArea .title .user .img{
+	display: inline-block;
+	width: 46px;
+	height: 46px;
+	background: url(../images/userIcon.png) no-repeat;
+	background-size: 100% 100%;
+	vertical-align: top;
+}
+.contArea .title .user .name{
+	font-size: 12px;
+	color: #333;
+	line-height: 46px;
+	margin-left: 14px;
+	vertical-align: top;
+}
+.contArea .title .help{
+	float: right;
+	height: 30px;
+	margin-top: 20px;
+	margin-right: 66px;
+	vertical-align: top;
+}
+.contArea .title .help a{
+	display: block;
+	height: 100%;
+}
+.contArea .title .help .icon{
+	display: inline-block;
+	height: 30px;
+	width: 30px;
+	background: url(../images/help.png) no-repeat;
+	background-size: 100% 100%;
+	margin-right: 10px;
+	vertical-align: top;
+}
+.contArea .title .help .text{
+	font-size: 12px;
+	color: #333;
+	line-height: 30px;
+}
+/*内容*/
+.contArea .cont{
+	width: 1630px;
+	height: 874px;
+	background-color: #fff;
+	border-radius: 4px;
+	margin-top: 20px;
+	margin-left: 20px;
+	overflow: hidden;
+}
+/*客户信息*/
+.contArea .cont .uesr,
+.contArea .cont .file{
+	width: 1548px;
+	margin-top: 35px;
+	margin-left: 38px;
+	margin-bottom: 50px;
+}
+.contArea .cont .uesr .tit span,
+.contArea .cont .file .tit span{
+	float: left;
+	width: 3px;
+	height: 14px;
+	background-color: #0097ed;
+	vertical-align: top;
+	margin-right: 8px;
+}
+.contArea .cont .uesr .tit div,
+.contArea .cont .file .tit div{
+	height: 14px;
+	line-height: 14px;
+	font-size: 14px;
+	color: #333;
+	vertical-align: top;
+}
+.contArea .cont .uesr table{
+	margin-top: 10px;
+	border-collapse: collapse;
+	width: 100%;
+	table-layout: fixed;
+	text-align: center;
+}
+.contArea .cont .uesr th{
+	height: 43px;
+	background-color: #0097ed;
+	font-size: 12px;
+	color: #fff;
+	border: 1px solid #e5e6ed;
+}
+.contArea .cont .uesr td{
+	height: 56px;
+	border: 1px solid #e5e6ed;
+	font-size: 12px;
+	color: #8d8d8d;
+}
+.contArea .file ul{
+	overflow: hidden;
+	margin-top: 28px;
+}
+.contArea .file li{
+	float: left;
+	width: 258px;
+	height: 285px;
+	background: url(../images/goodsPic.png) no-repeat;
+	background-size: 100% 100%; 
+	margin-right: 30px;
+}
+.contArea .file .last{
+	margin-right: 0;
+}
+.contArea .file li a{
+	display: block;
+	height: 100%;
+}
+
+

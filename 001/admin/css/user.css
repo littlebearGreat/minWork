@@ -92,7 +92,7 @@ a{
 .sideBar .active .side{
 	background-color: #ffc104;
 }
-.sideBar .active>div{
+.sideBar .active a>div{
 	background-color: #16aaff;
 }
 
@@ -146,8 +146,8 @@ a{
 }
 .contArea .title .user .img{
 	display: inline-block;
-	width: 46px;
-	height: 46px;
+	width: 45px;
+	height: 45px;
 	background: url(../images/userIcon.png) no-repeat;
 	background-size: 100% 100%;
 	vertical-align: top;
@@ -155,7 +155,7 @@ a{
 .contArea .title .user .name{
 	font-size: 12px;
 	color: #333;
-	line-height: 46px;
+	line-height: 45px;
 	margin-left: 14px;
 	vertical-align: top;
 }
@@ -468,4 +468,25 @@ a{
 table th,
 table td{
 	text-align: center;
+}
+.sideBar .children{
+	height: 40px;
+	background-color: #42bbf3;
+}
+.sideBar .children div{
+	padding-left: 84px;
+}
+.sideBar .noBott{
+	margin-bottom: 0;
+}
+.sideBar .noBottom{
+	margin-bottom: 0;
+}
+.sideBar li a{
+	display: block;
+	height: 100%;
+	color: #fff;
+}
+.sideBar li a>div{
+	height: 100%;
 }

@@ -33,7 +33,7 @@ table td{
 	color: #fff;
 	overflow: hidden;
 	vertical-align: top;
-	height: 1000px;
+	height: 1180px;
 }
 .sideBar .logo{
 	height: 75px;
@@ -97,7 +97,7 @@ table td{
 .sideBar .active .side{
 	background-color: #ffc104;
 }
-.sideBar .active>div{
+.sideBar .active a>div{
 	background-color: #16aaff;
 }
 
@@ -105,7 +105,7 @@ table td{
 .contArea{
 	display: inline-block;
 	width: 1680px;
-	height: 1000px;
+	height: 1180px;
 	vertical-align: top;
 	overflow: hidden;
 	background-color: #f0f1f6;
@@ -151,8 +151,8 @@ table td{
 }
 .contArea .title .user .img{
 	display: inline-block;
-	width: 46px;
-	height: 46px;
+	width: 45px;
+	height: 45px;
 	background: url(../images/userIcon.png) no-repeat;
 	background-size: 100% 100%;
 	vertical-align: top;
@@ -160,7 +160,7 @@ table td{
 .contArea .title .user .name{
 	font-size: 12px;
 	color: #333;
-	line-height: 46px;
+	line-height: 45px;
 	margin-left: 14px;
 	vertical-align: top;
 }
@@ -192,7 +192,7 @@ table td{
 /*内容*/
 .contArea .cont{
 	width: 1630px;
-	height: 874px;
+	height: 1036px;
 	background-color: #fff;
 	border-radius: 4px;
 	margin-top: 20px;
@@ -201,14 +201,16 @@ table td{
 }
 /*客户信息*/
 .contArea .cont .uesr,
-.contArea .cont .file{
+.contArea .cont .file,
+.contArea .cont .remark{
 	width: 1548px;
 	margin-top: 35px;
 	margin-left: 38px;
 	margin-bottom: 50px;
 }
 .contArea .cont .uesr .tit span,
-.contArea .cont .file .tit span{
+.contArea .cont .file .tit span,
+.contArea .cont .remark .tit span{
 	float: left;
 	width: 3px;
 	height: 14px;
@@ -217,7 +219,8 @@ table td{
 	margin-right: 8px;
 }
 .contArea .cont .uesr .tit div,
-.contArea .cont .file .tit div{
+.contArea .cont .file .tit div,
+.contArea .cont .remark .tit div{
 	height: 14px;
 	line-height: 14px;
 	font-size: 14px;
@@ -250,7 +253,7 @@ table td{
 }
 .contArea .file li{
 	float: left;
-	width: 258px;
+	width: 285px;
 	height: 285px;
 	background: url(../images/goodsPic.png) no-repeat;
 	background-size: 100% 100%; 
@@ -261,6 +264,70 @@ table td{
 }
 .contArea .file li a{
 	display: block;
+	height: 100%;
+}
+.contArea .cont .remark textarea{
+	margin-top: 28px;
+	width: 100%;
+	height: 100px;
+	resize: none;
+	overflow: auto;
+	font-size: 12px;
+	line-height: 20px;
+	color: #8f8f8f;
+	border-color: #e5e6ed;
+	outline: none;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.contArea .cont .remark{
+	margin-bottom: 0;
+}
+.contArea .cont>.tt_btn{
+	display: inline-block;
+	width: 266px;
+	height: 58px;
+	line-height: 58px;
+	text-align: center;
+	margin-top: 36px;
+	vertical-align: top;
+	margin-left: 42px;
+	border-radius: 4px;
+	cursor: pointer;
+	font-size: 16px;
+	letter-spacing: .2em;
+}
+.contArea .cont>.tt_btn a{
+	display: block;
+	height: 100%;
+	color: #fff;
+}
+.contArea .cancelOrder{
+	background-color: #ffaf04;
+}
+.contArea .loadFile{
+	background-color: #0097ed;
+}
+
+.sideBar .children{
+	height: 40px;
+	background-color: #42bbf3;
+}
+.sideBar .children div{
+	padding-left: 84px;
+}
+.sideBar .noBott{
+	margin-bottom: 0;
+}
+.sideBar .noBottom{
+	margin-bottom: 0;
+}
+.sideBar li a{
+	display: block;
+	height: 100%;
+	color: #fff;
+}
+.sideBar li a>div{
 	height: 100%;
 }
 

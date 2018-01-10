@@ -6,9 +6,11 @@ $(function(){
 		var a = false;
 		$('.WebMenu').hover(function(){
 			a = true;
+			$('.navList li').eq(1).addClass('addBack');
 		},function(){
 			a = false;
 			$('.WebMenu').hide();
+			$('.navList li').eq(1).removeClass('addBack');
 		});
 		setTimeout(function(){
 			if (!a) {

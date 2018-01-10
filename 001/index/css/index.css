@@ -71,9 +71,9 @@ a{
 	height: 100%;
 	color: #666;
 }
-.nav .navList .active,
-.nav .navList li:hover
-{
+/*.nav .navList .active,*/
+.nav .navList .addBack a,
+.nav .navList li:hover{
 	color: #fff;
 	background-color: #005a99;
 }

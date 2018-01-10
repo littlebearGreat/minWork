@@ -4,6 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>订单详情</title>
+	<link rel="stylesheet" href="js/Daterangepicker/css/bootstrap.css">
 	<link rel="stylesheet" href="css/orderDetail.css">
 	<script src="js/jquery.min.js"></script>
 	<script src="js/orderDetail.js"></script>
@@ -14,40 +15,66 @@
 		<div class="sideBar">
 			<div class="logo"></div>
 			<ul>
-				<li>
-					<span class="side"></span>
-					<div>
-						<span class="icon userManage"></span>
-						<span class="text">用户管理</span>
-					</div>
+				<li class="noBottom hasChildren1">
+					<a href="javascript:;">
+						<span class="side"></span>
+						<div>
+							<span class="icon userManage"></span>
+							<span class="text">用户管理</span>
+						</div>
+					</a>
 				</li>
-				<li class="active">
-					<span class="side"></span>
-					<div>
-						<span class="icon goodsManage"></span>
-						<span class="text">商品管理</span>
-					</div>
+				<li class="children children1 noBottom">
+					<a href="user.html">
+						<span class="side"></span>
+						<div>
+							<span class="text">用户详情</span>
+						</div>
+					</a>
 				</li>
-				<li>
-					<span class="side"></span>
-					<div>
-						<span class="icon goodsCategoryM"></span>
-						<span class="text">商品分类管理</span>
-					</div>
-				</li>
-				<li>
-					<span class="side"></span>
-					<div>
-						<span class="icon orderManage"></span>
-						<span class="text">订单管理</span>
-					</div>
+				<li class="children children1 active">
+					<a href="javascript:;">
+						<span class="side"></span>
+						<div>
+							<span class="text">订单详情（用户）</span>
+						</div>
+					</a>
 				</li>
 				<li>
-					<span class="side"></span>
-					<div>
-						<span class="icon dataAnalysis"></span>
-						<span class="text">数据分析</span>
-					</div>
+					<a href="javascript:;">
+						<span class="side"></span>
+						<div>
+							<span class="icon goodsManage"></span>
+							<span class="text">商品管理</span>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<span class="side"></span>
+						<div>
+							<span class="icon goodsCategoryM"></span>
+							<span class="text">商品分类管理</span>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<span class="side"></span>
+						<div>
+							<span class="icon orderManage"></span>
+							<span class="text">订单管理</span>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<span class="side"></span>
+						<div>
+							<span class="icon dataAnalysis"></span>
+							<span class="text">数据分析</span>
+						</div>
+					</a>
 				</li>
 			</ul>
 		</div>
@@ -143,6 +170,16 @@
 						<li class="last"><a href="javascript:;"></a></li>
 					</ul>
 				</div>
+				<!-- 备注 -->
+				<div class="remark">
+					<div class="tit">
+						<span></span>
+						<div>备注</div>
+					</div>
+					<textarea name="" id="" cols="30" rows="10"></textarea>
+				</div>
+				<span class="tt_btn cancelOrder"><a href="javascript:;">取消订单</a></span>
+				<span class="tt_btn loadFile"><a href="javascript:;">下载附件</a></span>
 			</div>
 		</div>
 	</div>

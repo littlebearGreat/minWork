@@ -13,14 +13,10 @@ $(function(){
 		};
 	})();
 
-	/** 
-	 * select模拟：
-	 * clickClass:点击对象的class名称
-	 * contClass:点击后要展现的内容的class名称
-	 */
+	// 下拉框
 	function selectT(clickClass,contClass){
 
-		var n = 0; /*定义n，来控制内容的展开与隐藏*/
+		var n = 0;
 
 		$(clickClass).click(function(){
 			$(contClass).slideDown(200);
@@ -72,7 +68,6 @@ $(function(){
 			firstDay : 1,
 		},
 		ranges : {
-			//'最近1小时': [moment().subtract('hours',1), moment()],
 			'今日': [moment().startOf('day'), moment()],
 			'昨日': [moment().subtract('days', 1).startOf('day'), moment().subtract('days', 1).endOf('day')],
 			'最近7日': [moment().subtract('days', 6), moment()],
@@ -80,21 +75,15 @@ $(function(){
 			'本月': [moment().startOf("month"),moment().endOf("month")],
 			'上个月': [moment().subtract(1,"month").startOf("month"),moment().subtract(1,"month").endOf("month")]
 		},
-		opens : 'left',	// 日期选择框的弹出位置(取值有：left/center/right)
+		opens : 'left',
 		separator : ' 至 ',
-		showWeekNumbers : true,		// 是否显示第几周
-
-
-		// 是否显示时间（小时、分钟）
+		showWeekNumbers : true,
 		timePicker: true,
-		timePickerIncrement : 1,	// 时间的增量，单位为分钟
-		timePicker12Hour : false,	// 是否使用12小时制来显示时间
-
-
-		maxDate : moment(new Date()),	// 允许选择的最大日期(这里我设置的是不能选择未来日期)
-		format: 'YYYY-MM-DD HH:mm'		/*日期格式*/
-
-	}, function(start, end, label) { // 格式化日期显示框
+		timePickerIncrement : 1,
+		timePicker12Hour : false,
+		maxDate : moment(new Date()),
+		format: 'YYYY-MM-DD HH:mm'
+	}, function(start, end, label) {
 		$('#beginTime').val(start.format('YYYY-MM-DD'));
 		$('#endTime').val(end.format('YYYY-MM-DD'));
 	})

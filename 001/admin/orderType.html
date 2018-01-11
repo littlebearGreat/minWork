@@ -1,0 +1,277 @@
+<!-- orderType.html 商品分类管理 -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>商品分类管理</title>
+	<link rel="stylesheet" href="css/orderType.css">
+	<script src="js/jquery.min.js"></script>
+	<script src="js/orderType.js"></script>
+</head>
+<body>
+	<div class="body">
+		<!-- 侧边栏 -->
+		<div class="sideBar">
+			<div class="logo"></div>
+			<ul>
+				<li class="hasChildren1">
+					<a href="javascript:;">
+						<span class="side"></span>
+						<div>
+							<span class="icon userManage"></span>
+							<span class="text">用户管理</span>
+						</div>
+					</a>
+				</li>
+				<li class="children children1 noBottom">
+					<a href="user.html">
+						<span class="side"></span>
+						<div>
+							<span class="text">用户详情</span>
+						</div>
+					</a>
+				</li>
+				<li class="children children1">
+					<a href="orderDetail.html">
+						<span class="side"></span>
+						<div>
+							<span class="text">订单详情（用户）</span>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<span class="side"></span>
+						<div>
+							<span class="icon goodsManage"></span>
+							<span class="text">商品管理</span>
+						</div>
+					</a>
+				</li>
+				<li class="active">
+					<a href="javascript:;">
+						<span class="side"></span>
+						<div>
+							<span class="icon goodsCategoryM"></span>
+							<span class="text">商品分类管理</span>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<span class="side"></span>
+						<div>
+							<span class="icon orderManage"></span>
+							<span class="text">订单管理</span>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<span class="side"></span>
+						<div>
+							<span class="icon dataAnalysis"></span>
+							<span class="text">数据分析</span>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+
+		<!-- 内容区 -->
+		<div class="contArea">
+			<!-- 头部 -->
+			<div class="title">
+				<div class="locate">
+					<span class="icon"></span>
+					<span class="text">当前位置：后台管理>商品分类管理>添加分类</span>
+				</div>
+				<div class="loginOut">
+					<a href="javascript:;">退出</a>
+				</div>
+				<div class="user">
+					<a href="javascript:;">
+						<span class="img"></span>
+						<span class="name">lay.Liu</span>
+					</a>
+				</div>
+			</div>
+			<!-- 内容 -->
+			<div class="cont">
+				<!-- 搜索栏 -->
+				<div class="searchBar">
+					<span class="tit">关键字：</span>
+					<input class="keyword" type="text" placeholder="请输入产品名称">
+					<span class="tit">类别：</span>
+					<div class="type">
+						<div>
+							<span></span>
+							<p>请选择</p>
+						</div>
+						<ul>
+							<li>类别1</li>
+							<li>类别2</li>
+							<li>类别3</li>
+						</ul>
+					</div>
+					<span class="tit">品牌：</span>
+					<div class="goodsName">
+						<div>
+							<span></span>
+							<p>请选择</p>
+						</div>
+						<ul>
+							<li>品牌1</li>
+							<li>品牌2</li>
+							<li>品牌3</li>
+						</ul>
+					</div>
+					<span class="tt_btn resize">重置</span>
+					<span class="tt_btn search">搜索</span>
+				</div>
+				<!-- 新增分类 -->
+				<div class="addType">
+					<span>
+						<a href="javascript:;">
+							新增分类
+						</a>
+					</span>
+				</div>
+				<!-- 软件 -->
+				<table class="software">
+					<thead>
+						<tr>
+							<th>分类名称</th>
+							<th>创建时间</th>
+							<th>品牌数量</th>
+							<th>分类名称</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="iconTd">
+								<a class="icon" href="javascript:;">软件</a>
+							</td>
+							<td>2018.1.9</td>
+							<td>20</td>
+							<td class="opreate">
+								<a class="red" href="javascript:;">删除</a>
+								<a class="blue" href="javascript:;">修改名称</a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<!-- 添加子分类 -->
+				<div class="addChildType">
+					<span>
+						<a href="javascript:;">添加子分类</a>
+					</span>
+				</div>
+				<!-- 硬件 -->
+				<table class="software">
+					<thead>
+						<tr>
+							<th>分类名称</th>
+							<th>创建时间</th>
+							<th>品牌数量</th>
+							<th>分类名称</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="iconTd">
+								<a class="icon" href="javascript:;">硬件</a>
+							</td>
+							<td>2018.1.9</td>
+							<td>20</td>
+							<td class="opreate">
+								<a class="red" href="javascript:;">删除分类</a>
+								<a class="blue" href="javascript:;">修改名称</a>
+							</td>
+						</tr>
+						<tr>
+							<td class="iconTd">显示器</td>
+							<td>2018.1.9</td>
+							<td>20</td>
+							<td class="opreate">
+								<a class="red" href="javascript:;">删除分类</a>
+								<a class="blue" href="javascript:;">修改名称</a>
+								<a class="blue" href="javascript:;">添加品牌</a>
+							</td>
+						</tr>
+						<tr>
+							<td class="iconTd">显示器</td>
+							<td>2018.1.9</td>
+							<td>20</td>
+							<td class="opreate">
+								<a class="red" href="javascript:;">删除分类</a>
+								<a class="blue" href="javascript:;">修改名称</a>
+								<a class="blue" href="javascript:;">添加品牌</a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<!-- 添加子分类 -->
+				<div class="addChildType">
+					<span>
+						<a href="javascript:;">添加子分类</a>
+					</span>
+				</div>
+				<!-- 维修类 -->
+				<table class="software">
+					<thead>
+						<tr>
+							<th>分类名称</th>
+							<th>创建时间</th>
+							<th>品牌数量</th>
+							<th>分类名称</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="iconTd">
+								<a class="icon" href="javascript:;">维修类</a>
+							</td>
+							<td>2018.1.9</td>
+							<td>20</td>
+							<td class="opreate">
+								<a class="red" href="javascript:;">删除</a>
+								<a class="blue" href="javascript:;">修改名称</a>
+								<a class="blue" href="javascript:;">添加品牌</a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<!-- 添加子分类 -->
+				<div class="addChildType">
+					<span>
+						<a href="javascript:;">添加子分类</a>
+					</span>
+				</div>
+				<!-- 页码 -->
+				<div class="page">
+					<ul>
+						<li class="border last"></li>
+						<li class="border sm active">1</li>
+						<li class="border sm">2</li>
+						<li class="border sm">3</li>
+						<li class="border sm">4</li>
+						<li class="border sm">5</li>
+						<li class="border sm">6</li>
+						<li class="border sm">7</li>
+						<li class="border sm">8</li>
+						<li class="border sm">9</li>
+						<li class="border next"></li>
+						<li class="border bg total">10条/页</li>
+						<li class="jump">跳至</li>
+						<li class="ipt border sm">
+							<input type="number">
+						</li>
+						<li class="text">页</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,4 +1,4 @@
-/*newEquipBuy.css 新机购买*/
+/*equipRepair.css 设备维修*/
 /*样式初始化*/
 body,ul,li,p{
 	margin: 0;
@@ -335,11 +335,11 @@ a{
 	font-size: 20px;
 	padding-left: 32px;
 	line-height: 20px;
-	margin-top: 10px;
+	margin-top: 14px;
 	color: #666;
 }
 .contList .list .btn{
-	margin-top: 14px;
+	margin-top: 40px;
 	margin-left: 32px;
 	display: inline-block;
 	width: 70px;

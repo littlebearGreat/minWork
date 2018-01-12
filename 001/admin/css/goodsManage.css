@@ -1,0 +1,439 @@
+/*goodsManage.css 商品管理*/
+/*样式初始化--开始*/
+body,ul,li,p{
+	margin: 0;
+	padding: 0;
+}
+body{
+	font-size: 0px;
+	min-width: 1920px;
+	font-family: Arial,'Times New Roman','Microsoft YaHei',SimHei;
+}
+ul{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+table th,
+table td{
+	text-align: center;
+}
+/*样式初始化--结束*/
+.body{
+	width: 1920px;
+	margin: 0 auto;
+}
+/*侧边栏*/
+.sideBar{
+	display: inline-block;
+	width: 240px;
+	background-color: #0097ed;
+	color: #fff;
+	overflow: hidden;
+	vertical-align: top;
+	/*height: 1920px;*/
+	height: 100%;
+}
+.sideBar .logo{
+	height: 75px;
+	background: url(../images/logo.png) no-repeat;
+	background-position: center center;
+}
+.sideBar ul{
+	margin-top: 12px;
+}
+.sideBar li{
+	height: 45px;
+	margin-bottom: 20px;
+	cursor: pointer;
+}
+.sideBar .side{
+	float: left;
+	height: 100%;
+	width: 5px;
+}
+.sideBar li>div{
+	height: 100%;
+}
+.sideBar .icon{
+	display: inline-block;
+	height: 17px;
+	width: 17px;
+	margin-top: 15px;
+	vertical-align: top;
+	margin-left: 43px;
+	margin-right: 6px;
+	background: #fff;
+}
+.sideBar .userManage{
+	background: url(../images/user.png) no-repeat;
+	background-size: 100% 100%;
+}
+.sideBar .goodsManage{
+	background: url(../images/goods.png) no-repeat;
+	background-size: 100% 100%;
+}
+.sideBar .goodsCategoryM{
+	background: url(../images/goodsType.png) no-repeat;
+	background-size: 100% 100%;
+}
+.sideBar .orderManage{
+	background: url(../images/order.png) no-repeat;
+	background-size: 100% 100%;
+}
+.sideBar .dataAnalysis{
+	background: url(../images/dataAnalysis.png) no-repeat;
+	background-size: 100% 100%;
+}
+.sideBar .text{
+	display: inline-block;
+	height: 16px;
+	line-height: 16px;
+	font-size: 12px;
+	vertical-align: top;
+	margin-top: 15px;
+}
+.sideBar .active .side{
+	background-color: #ffc104;
+}
+.sideBar .active a>div{
+	background-color: #16aaff;
+}
+.sideBar .children{
+	height: 40px;
+	background-color: #42bbf3;
+	display: none;
+}
+.sideBar .children div{
+	padding-left: 84px;
+}
+.sideBar .noBott{
+	margin-bottom: 0;
+}
+.sideBar .noBottom{
+	margin-bottom: 0;
+}
+.sideBar li a{
+	display: block;
+	height: 100%;
+	color: #fff;
+}
+.sideBar li a>div{
+	height: 100%;
+}
+
+/*内容区*/
+.contArea{
+	display: inline-block;
+	width: 1680px;
+	vertical-align: top;
+	overflow: hidden;
+	background-color: #f0f1f6;
+}
+/*头部*/
+.contArea .title{
+	height: 75px;
+	background-color: #fff;
+}
+.contArea .title .locate{
+	float: left;
+}
+.contArea .title .locate .icon{
+	display: inline-block;
+	width: 19px;
+	height: 28px;
+	margin-top: 23px;
+	margin-left: 28px;
+	margin-right: 14px;
+	vertical-align: top;
+	background: url(../images/locate.png) no-repeat;
+	background-size: 100% 100%;
+}
+.contArea .title .locate .text{
+	display: inline-block;
+	height: 75px;
+	font-size: 12px;
+	color: #8f8f8f;
+	line-height: 75px;
+	vertical-align: top;
+}
+.contArea .title .user{
+	float: right;
+	display: inline-block;
+	height: 46px;
+	margin-top: 14px;
+	vertical-align: top;
+	margin-right: 20px;
+}
+.contArea .title .user a{
+	display: block;
+	height: 100%;
+}
+.contArea .title .user .img{
+	display: inline-block;
+	width: 45px;
+	height: 45px;
+	background: url(../images/userIcon.png) no-repeat;
+	background-size: 100% 100%;
+	vertical-align: top;
+}
+.contArea .title .user .name{
+	font-size: 12px;
+	color: #333;
+	line-height: 45px;
+	margin-left: 14px;
+	vertical-align: top;
+}
+.loginOut{
+	float: right;
+	height: 45px;
+	vertical-align: top;
+	margin-top: 14px;
+	margin-right: 100px;
+}
+.loginOut a{
+	display: block;
+	height: 45px;
+	font-size: 12px;
+	line-height: 45px;
+	color: #0197ee;
+}
+/*内容*/
+.contArea .cont{
+	width: 1630px;
+	background-color: #fff;
+	border-radius: 4px;
+	margin-top: 20px;
+	margin-left: 20px;
+	overflow: hidden;
+	margin-bottom: 33px;
+}
+.contTitle{
+	line-height: 28px;
+	font-size: 28px;
+	margin-top: 48px;
+	color: #333;
+	margin-left: 44px;
+}
+.contArea .cont .type,
+.contArea .cont .name{
+	height: 64px;
+	margin-top: 42px;
+	margin-left: 100px;
+}
+.contArea .cont .type span,
+.contArea .cont .name span,
+.contArea .cont .describe span{
+	line-height: 64px;
+	font-size: 24px;
+	color: #333;
+	margin-right: 48px;
+	vertical-align: top;
+}
+.contArea .cont .type input,
+.contArea .cont .name input{
+	height: 62px;
+	border: 1px solid #dcdcdc;
+	outline: none;
+	font-size: 24px;
+	line-height: 62px;
+	width: 852px;
+	padding: 0 24px;
+	vertical-align: top;
+	color: #333;
+}
+.contArea .cont .describe{
+	height: 130px;
+	margin-top: 42px;
+	margin-left: 100px;
+}
+.contArea .cont .describe textarea{
+	height: 130px;
+	border: 1px solid #dcdcdc;
+	outline: none;
+	font-size: 24px;
+	line-height: 62px;
+	width: 852px;
+	padding: 0 24px;
+	vertical-align: top;
+	resize: none;
+	color: #333;
+}
+.contArea .cont .price{
+	height: 36px;
+	margin-top: 58px;
+	margin-bottom: 10px;
+	margin-left: 100px;
+}
+.contArea .cont .price span{
+	font-size: 24px;
+	line-height: 36px;
+	vertical-align: top;
+	color: #333;
+}
+.contArea .cont .price .tit{
+	margin-right: 48px;
+}
+.contArea .cont .price input{
+	height: 36px;
+	width: 120px;
+	text-align: center;
+	line-height: 34px;
+	font-size: 24px;
+	color: #333;
+	border: 1px solid #dcdcdc;
+	outline: none;
+	vertical-align: top;
+	margin-right: 30px;
+}
+.contArea .cont .price .high{
+	margin-left: 30px;
+}
+.contArea .cont .price .centerIcon{
+	color: #dcdcdc;
+}
+/*服务标准*/
+.contArea .cont .server{
+	height: 64px;
+	margin-top: 38px;
+	margin-left: 100px;
+}
+.contArea .cont .server>span{
+	float: left;
+	line-height: 64px;
+	font-size: 24px;
+	color: #333;
+	margin-right: 48px;
+	vertical-align: top;
+}
+.contArea .cont .server table{
+	border: 1px solid #dcdcdc;
+	table-layout: fixed;
+	height: 64px;
+	width: 902px;
+	float: left;
+	vertical-align: top;
+}
+.contArea .cont .server table td{
+	text-align: left;
+}
+.contArea .cont .server table .check{
+	display: inline-block;
+	height: 20px;
+	cursor: pointer;
+	margin-left: 90px;
+}
+.contArea .cont .server table .icon{
+	display: inline-block;
+	height: 20px;
+	width: 20px;
+	vertical-align: top;
+	background: url(../images/check1.png) no-repeat;
+	background-size: 100% 100%;
+}
+.contArea .cont .server table .active .icon{
+	background: url(../images/check2.png) no-repeat;
+	background-size: 100% 100%;
+}
+.contArea .cont .server table .text{
+	font-size: 18px;
+	line-height: 20px;
+	color: #333;
+	vertical-align: top;
+	margin-left: 6px;
+}
+/*产品banner图-start*/
+.contArea .bannerPic{
+	margin-top: 38px;
+	margin-left: 100px; 
+}
+.contArea .bannerPic>span{
+	float: left;
+	line-height: 64px;
+	font-size: 24px;
+	color: #333;
+	margin-right: 48px;
+	vertical-align: top;
+}
+.contArea .bannerPic ul{
+	display: inline-block;
+	vertical-align: top;
+	width: 812px;
+	overflow: hidden;
+}
+.contArea .bannerPic li{
+	float: left;
+	width: 200px;
+	height: 100px;
+	position: relative;
+	border-radius: 4px;
+	margin: 10px 28px;
+}
+.contArea .goodsPic li{
+	width: 100px;
+}
+.contArea .bannerPic li img{
+	width: 100%;
+	height: 100%;
+}
+.contArea .bannerPic li span{
+	position: absolute;
+	width: 16px;
+	height: 16px;
+	top: -4px;
+	right: -4px;
+	cursor: pointer;
+	background: url(../images/delet.png) no-repeat;
+	background-size: 100% 100%;
+}
+.contArea .bannerPic .add{
+	width: 100px;
+	height: 100px;
+	background: url(../images/bannerPicAdd.png) no-repeat;
+	background-size: 100% 100%;
+	cursor: pointer;
+}
+.contArea .goodsPic{
+	margin-bottom: 34px;
+}
+/*产品banner图-end*/
+/*横线*/
+.contArea .line{
+	margin: 0 20px;
+	border-bottom: 1px solid #dcdcdc;
+}
+.contArea .cont .upLine{
+	margin-top: 76px;
+}
+.contArea .cont .goodsDetail{
+	height: 170px;
+}
+.contArea .cont .goodsDetail textarea{
+	height: 170px;
+	margin-left: 8px;
+}
+/*取消，保存*/
+.contArea .cancel,
+.contArea .save{
+	display: inline-block;
+	width: 170px;
+	height: 60px;
+	border-radius: 4px;
+	cursor: pointer;
+	font-size: 18px;
+	line-height: 60px;
+	color: #fff;
+	text-align: center;
+	margin-top: 106px;
+	vertical-align: top;
+}
+.contArea .cancel{
+	margin-left: 420px;
+	margin-right: 240px;
+	margin-bottom: 53px;
+	background-color: #ccc;
+}
+.contArea .save{
+	background-color: #0096ff;
+}

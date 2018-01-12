@@ -1,0 +1,248 @@
+<!-- goodsManage.html 商品管理 -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>添加商品</title>
+	<link rel="stylesheet" href="css/goodsManage.css">
+	<script src="js/jquery.min.js"></script>
+	<script src="js/goodsManage.js"></script>
+</head>
+<body>
+	<div class="body">
+		<!-- 侧边栏 -->
+		<div class="sideBar">
+			<div class="logo"></div>
+			<ul>
+				<li class="hasChildren1">
+					<a href="javascript:;">
+						<span class="side"></span>
+						<div>
+							<span class="icon userManage"></span>
+							<span class="text">用户管理</span>
+						</div>
+					</a>
+				</li>
+				<li class="children children1 noBottom">
+					<a href="user.html">
+						<span class="side"></span>
+						<div>
+							<span class="text">用户详情</span>
+						</div>
+					</a>
+				</li>
+				<li class="children children1">
+					<a href="orderDetail.html">
+						<span class="side"></span>
+						<div>
+							<span class="text">订单详情（用户）</span>
+						</div>
+					</a>
+				</li>
+				<li class="active">
+					<a href="javascript:;">
+						<span class="side"></span>
+						<div>
+							<span class="icon goodsManage"></span>
+							<span class="text">商品管理</span>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="orderType.html">
+						<span class="side"></span>
+						<div>
+							<span class="icon goodsCategoryM"></span>
+							<span class="text">商品分类管理</span>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<span class="side"></span>
+						<div>
+							<span class="icon orderManage"></span>
+							<span class="text">订单管理</span>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<span class="side"></span>
+						<div>
+							<span class="icon dataAnalysis"></span>
+							<span class="text">数据分析</span>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+
+		<!-- 内容区 -->
+		<div class="contArea">
+			<!-- 头部 -->
+			<div class="title">
+				<div class="locate">
+					<span class="icon"></span>
+					<span class="text">当前位置：后台管理>商品管理>添加商品</span>
+				</div>
+				<div class="loginOut">
+					<a href="javascript:;">退出</a>
+				</div>
+				<div class="user">
+					<a href="javascript:;">
+						<span class="img"></span>
+						<span class="name">lay.Liu</span>
+					</a>
+				</div>
+			</div>
+			<p class="contTitle">添加商品/硬件类</p>
+			<!-- 内容 -->
+			<div class="cont">
+				<div class="type">
+					<span>产品类型：</span>
+					<input type="text" placeholder="硬件/软件">
+				</div>
+				<div class="name">
+					<span>产品名称：</span>
+					<input type="text" placeholder="建议名称">
+				</div>
+				<div class="describe">
+					<span>产品描述：</span>
+					<textarea name="" id="" cols="30" rows="10" placeholder="建议名称"></textarea>
+				</div>
+				<div class="price">
+					<span class="tit">报价范围：</span>
+					<input class="low" type="text">
+					<span class="centerIcon">——</span>
+					<input class="high" type="text">
+					<span>元</span>
+				</div>
+				<!-- 服务标准 -->
+				<div class="server">
+					<span>服务标准：</span>
+					<table>
+						<tr>
+							<td>
+								<span class="check active">
+									<span class="icon"></span>
+									<span class="text">质量保证</span>
+								</span>
+							</td>
+							<td>
+								<span class="check">
+									<span class="icon"></span>
+									<span class="text">保证180天</span>
+								</span>
+							</td>
+							<td>
+								<span class="check">
+									<span class="icon"></span>
+									<span class="text">免费上门</span>
+								</span>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<!-- 产品品牌 -->
+				<div class="server">
+					<span>产品品牌：</span>
+					<table>
+						<tr>
+							<td>
+								<span class="check active">
+									<span class="icon"></span>
+									<span class="text">品牌1</span>
+								</span>
+							</td>
+							<td>
+								<span class="check">
+									<span class="icon"></span>
+									<span class="text">品牌2</span>
+								</span>
+							</td>
+							<td>
+								<span class="check">
+									<span class="icon"></span>
+									<span class="text">品牌3</span>
+								</span>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<!-- 产品尺寸 -->
+				<div class="server">
+					<span>产品尺寸：</span>
+					<table>
+						<tr>
+							<td>
+								<span class="check active">
+									<span class="icon"></span>
+									<span class="text">尺寸1</span>
+								</span>
+							</td>
+							<td>
+								<span class="check">
+									<span class="icon"></span>
+									<span class="text">尺寸2</span>
+								</span>
+							</td>
+							<td>
+								<span class="check">
+									<span class="icon"></span>
+									<span class="text">尺寸3</span>
+								</span>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<!-- 产品banner图 -->
+				<div class="bannerPic bannerPicOwn">
+					<span>产品banner图：</span>
+					<ul>
+						<li class="add"></li>
+					</ul>
+				</div>
+				<!-- 产品图 -->
+				<div class="bannerPic goodsPic">
+					<span>产品图：</span>
+					<ul>
+						<li class="add"></li>
+					</ul>
+				</div>
+				<!-- 横线 -->
+				<div class="line"></div>
+				<!-- 上架/下架 -->
+				<div class="server upLine">
+					<span>上架/下架：</span>
+					<table>
+						<tr>
+							<td>
+								<span class="check active">
+									<span class="icon"></span>
+									<span class="text">上架</span>
+								</span>
+							</td>
+							<td>
+								<span class="check">
+									<span class="icon"></span>
+									<span class="text">下架</span>
+								</span>
+							</td>
+							<td></td>
+						</tr>
+					</table>
+				</div>
+				<!-- 产品详情 -->
+				<div class="describe goodsDetail">
+					<span>产品详情：</span>
+					<textarea name="" id="" cols="30" rows="10"></textarea>
+				</div>
+				<!-- 取消，保存 -->
+				<span class="cancel">取消</span>
+				<span class="save">保存</span>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,493 @@
+/*aboutUs2.css 关于我们2*/
+body,ul,li,p{
+	margin: 0;
+	padding: 0;
+}
+body{
+	font-size: 0px;
+	min-width: 1100px;
+	font-family: Arial,'Times New Roman','Microsoft YaHei',SimHei;
+}
+ul{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+.top{
+	height: 30px;
+	background-color: #354050;
+}
+.top div{
+	width: 1100px;
+	height: 100%;
+	margin: 0 auto;
+}
+.top .name{
+	float: left;
+	font-size: 12px;
+	color: #fff;
+	line-height: 30px;
+}
+.top .tel{
+	float: right;
+	font-size: 12px;
+	color: #fff;
+	line-height: 30px;
+}
+/*导航*/
+.nav{
+	width: 1100px;
+	height: 78px;
+	background-color: #fff;
+	margin: 0 auto;
+	position: relative;
+}
+.nav .logo{
+	float: left;
+	width: 320px;
+	height: 65px;
+	margin-top: 6px;
+	vertical-align: top;
+	background: url(../images/index/logo.jpg) no-repeat;
+	background-size: 100% 100%;
+}
+.nav .navList{
+	float: right;
+}
+.nav .navList li{
+	float: left;
+	height: 78px;
+	width: 92px;
+	margin-left: 18px;
+	font-size: 14px;
+	color: #666;
+	line-height: 78px;
+	text-align: center;
+	cursor: pointer;
+	vertical-align: top;
+}
+.nav .navList li a{
+	display: block;
+	height: 100%;
+	color: #666;
+}
+/*.nav .navList .active,*/
+.nav .navList .addBack a,
+.nav .navList li:hover{
+	color: #fff;
+	background-color: #005a99;
+}
+.nav .navList li:hover a{
+	color: #fff;
+}
+.WebMenu{
+	position: absolute;
+	left: 458px;
+	top: 78px;
+	width: 372px;
+	height: 252px;
+	background-color: #005a99;
+	display: none;
+	z-index: 99;
+}
+.WebMenu .list{
+	display: inline-block;
+	vertical-align: top;
+	width: 124px;
+}
+.WebMenu .list div{
+	width: 100%;
+	height: 44px;
+	line-height: 44px;
+	color: #fff;
+	font-size: 12px;
+	text-align: center;
+	vertical-align: top;
+	font-weight: bold;
+}
+.WebMenu .list .h1{
+	background: url(../images/index/we1.png) no-repeat;
+	background-position: 4px 13px;
+}
+.WebMenu .list .h2{
+	background: url(../images/index/we2.png) no-repeat;
+	background-position: 4px 13px;
+}
+.WebMenu .list .h3{
+	background: url(../images/index/we3.png) no-repeat;
+	background-position: 4px 13px;
+}
+.WebMenu ul{
+	margin-top: 4px;
+}
+.WebMenu li{
+	font-size: 12px;
+	color: #fff;
+	cursor: pointer;
+	line-height: 24px;
+	text-align: center;
+}
+.WebMenu li a {
+    display: block;
+    color: #fff;
+    height: 100%;
+    overflow: hidden;
+}
+/*banner*/
+.banner{
+	width: 100%;
+	min-width: 1100px;
+	height: 616px;
+	position: relative;
+}
+.banner .images{
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+.banner .images li{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: none;
+}
+.banner .images li img{
+	width: 100%;
+	height: 100%;
+}
+.banner .sign{
+	position: absolute;
+	bottom: 15px;
+	width: 100%;
+	height: 25px;
+	text-align: center;
+}
+.banner .sign li{
+	display: inline-block;
+	width: 60px;
+	height: 6px;
+	background-color: rgba(255,255,255,.3);
+	margin: 0 4px;
+	cursor: pointer;
+}
+.banner .sign .active{
+	background-color: #fff;
+}
+/* 底部导航 */
+.bottomNav{
+	width: 100%;
+	min-width: 1100px;
+	margin-top: 20px;
+	height: 392px;
+	background-color: #2c2c2c;
+}
+.bottomNav .box{
+	width: 1100px;
+	height: 100%;
+	margin: 0 auto;
+}
+.bottomNav .list{
+	display: inline-block;
+	width: 275px;
+	vertical-align: top;
+	margin-top: 48px;
+}
+.bottomNav .list .tit{
+	color: #fff;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 46px;
+	height: 46px;
+	padding-left: 4px;
+	text-align: left;
+}
+.bottomNav .list li{
+	font-size: 12px;
+	line-height: 12px;
+	margin-top: 25px;
+	padding-left: 4px;
+}
+.bottomNav .list li a{
+	color: #8b8b8b;
+	text-decoration: none;
+}
+/*底部*/
+.bottomLink{
+	width: 100%;
+	min-width: 1100px;
+	height: 208px;
+	background-color: #131313;
+}
+.bottomLink .box{
+	width: 1100px;
+	height: 100px;
+	margin: 0 auto;
+}
+.bottomLink .link{
+	height: 106px;
+	border-bottom: 1px solid #8b8b8b;
+}
+.bottomLink .link .tit{
+	display: inline-block;
+	width: 206px;
+	height: 106px;
+	line-height: 106px;
+	font-size: 14px;
+	font-weight: bold;
+	color: #fff;
+	text-align: center;
+	vertical-align: top;
+	margin-left: 50px;
+}
+.bottomLink .link .text{
+	display: inline-block;
+	width: 750px;
+	height: 40px;
+	margin-top: 33px;
+	vertical-align: top;
+	font-size: 12px;
+	line-height: 20px;
+	color: #8b8b8b;
+}
+.bottomLink .link .text a{
+	text-decoration: none;
+	color: #8b8b8b;
+}
+.bottomLink .cop{
+	font-size: 12px;
+	color: #8b8b8b;
+	line-height: 106px;
+	text-align: center;
+}
+/*底部-end*/
+
+/*我们的服务-start*/
+	.ourService,
+	.friends{
+		width: 1200px;
+		margin: 80px auto 0;
+	}
+	.ourService .h1,
+	.cooperation .h1,
+	.excellent .h1,
+	.friends .h1{
+		font-size: 36px;
+		line-height: 86px;
+		text-align: center;
+		color: #000;
+	}
+	.ourService .h2,
+	.cooperation .h2,
+	.friends .h2{
+		font-size: 20px;
+		line-height: 20px;
+		height: 20px;
+		color: #333;
+		text-align: center;
+	}
+	.ourService .h2,
+	.friends .h2{
+		background: url(../images/hBack1.jpg) no-repeat;
+		background-position: center center;
+	}
+	.ourService ul,
+	.excellent ul{
+		overflow: hidden;
+		margin-top: 20px;
+	}
+	.ourService li,
+	.excellent li{
+		float: left;
+		width: 285px;
+		height: 200px;
+		margin-right: 20px;
+		margin-bottom: 20px;
+	}
+	.ourService ul .last,
+	.excellent ul .last{
+		margin-right: 0;
+	}
+	.ourService li div{
+		height: 160px;
+		position: relative;
+	}
+	.ourService li a{
+		display: block;
+		height: 200px;
+	}
+	.ourService li img{
+		position: absolute;
+		left: 0;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		margin: auto;
+	}
+	.ourService li p{
+		font-size: 18px;
+		color: #333;
+		text-align: center;
+		line-height: 40px;
+	}
+/*我们的服务-end*/
+
+/*个性化-start*/
+	.individualization{
+		margin-top: 20px;
+		background: url(../images/individualization.jpg) no-repeat;
+		background-size: 100% 100%;
+		height: 900px;
+	}
+	.individualization .box{
+		width: 1200px;
+		margin: 0 auto;
+		overflow: hidden;
+	}
+	.individualization .t{
+		float: right;
+		width: 470px;
+		margin-top: 215px;
+	}
+	.individualization .h1{
+		font-size: 45px;
+		color: #fff;
+		line-height: 65px;
+	}
+	.individualization .h2{
+		font-size: 20px;
+		line-height: 30px;
+		color: #fff;
+	}
+	.individualization .mt{
+		margin-top: 100px;
+	}
+/*个性化-end*/
+
+/*合作流程-start*/
+	.cooperation,
+	.excellent{
+		width: 1200px;
+		margin: 40px auto 0;
+		overflow: hidden;
+	}
+	.cooperation .h1,
+	.excellent .h1{
+		background: url(../images/hBack1.jpg) no-repeat;
+		background-position: center center;
+	}
+	.cooperation2{
+		margin-top: 60px;
+		height: 770px;
+		background: url(../images/cooperation2.jpg) no-repeat;
+		background-position: center center;
+	}
+	.cooperation2 .box{
+		width: 1200px;
+		margin: 0 auto;
+		height: 770px;
+		position: relative;
+	}
+	.cooperation2 .box div{
+		width: 250px;
+		position: absolute;
+	}
+	.cooperation2 .h1{
+		font-size: 24px;
+		color: #fff;
+		text-align: center;
+		line-height: 34px;
+	}
+	.cooperation2 .h2{
+		font-size: 14px;
+		color: #fff;
+		text-align: center;
+		line-height: 24px;
+	}
+	.cooperation2 .b1{
+		left: 485px;
+		top: 54px;
+	}
+	.cooperation2 .b2{
+		left: 116px;
+		top: 252px;
+	}
+	.cooperation2 .b3{
+		left: 820px;
+		top: 252px;
+	}
+	.cooperation2 .b4{
+		left: 116px;
+		top: 490px;
+	}
+	.cooperation2 .b5{
+		left: 820px;
+		top: 490px;
+	}
+	.cooperation2 .b6{
+		left: 485px;
+		top: 685px;
+	}
+/*合作流程-end*/
+
+/*优秀案例-start*/
+	.excellent ul{
+		overflow: visible
+	}
+	.excellent li{
+		height: 225px;
+	}
+	.excellent li a{
+		display: block;
+		height: 225px;
+	}
+	.excellent li img{
+		width: 100%;
+		height: 100%;
+	}
+	.excellent li{
+		transition: all .2s linear;
+		-moz-transition: all .2s linear;
+		-webkit-transition: all .2s linear;
+		-o-transition: all .2s linear;
+	}
+	.excellent li:hover{
+	    box-shadow: 0 3px 20px rgba(0, 0, 0, .1);
+		transform: translate3d(0px, -4px, 10px);
+		-ms-transform: translate3d(0px, -4px, 10px);
+		-moz-transform: translate3d(0px, -4px, 10px);
+		-webkit-transform: translate3d(0px, -4px, 10px);
+		-o-transform: translate3d(0px, -4px, 10px);
+	}
+/*优秀案例-end*/
+
+/*合作伙伴-start*/
+	.friends{
+		margin-top: 40px;
+		margin-bottom: 80px;
+	}
+	.friends ul{
+		overflow: hidden;
+		margin-top: 60px;
+	}
+	.friends li{
+		float: left;
+		width: 183px;
+		height: 85px;
+		margin-right: 20px;
+		margin-bottom: 20px;
+	}
+	.friends ul .last{
+		margin-right: 0;
+	}
+	.friends li a{
+		display: block;
+		height: 85px;
+	}
+	.friends li img{
+		width: 100%;
+		height: 100%;
+	}
+/*合作伙伴-end*/

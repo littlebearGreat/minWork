@@ -85,4 +85,19 @@ $(function(){
 
 	turnPic('.images li','.sign li','.banner .previous','.banner .next','.banner','active');
 
+
+	// 合作流程动画
+	function animat(){
+		var css = {height:'600px'};  
+	    $('.cooperation2 .centerPic').animate(css,1000,rowBack);  
+	    function rowBack(){  
+	        if(css.height==='600px'){
+	            css.height='560px';  
+	        }else if(css.height==='560px'){
+	            css.height='600px';  	
+	        };
+	        $('.cooperation2 .centerPic').animate(css,1000,rowBack);  
+	    };
+	};
+	animat();
 })

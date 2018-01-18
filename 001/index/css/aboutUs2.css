@@ -394,6 +394,14 @@ a{
 		width: 250px;
 		position: absolute;
 	}
+	.cooperation2 .box .centerPic{
+		position: absolute;
+		left: 0;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		margin: auto;
+	}
 	.cooperation2 .h1{
 		font-size: 24px;
 		color: #fff;
@@ -408,7 +416,7 @@ a{
 	}
 	.cooperation2 .b1{
 		left: 485px;
-		top: 54px;
+		top: 30px;
 	}
 	.cooperation2 .b2{
 		left: 116px;

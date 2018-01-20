@@ -1,0 +1,717 @@
+/*aboutUs3.css 关于我们3*/
+body,ul,li,p{
+	margin: 0;
+	padding: 0;
+}
+body{
+	font-size: 0px;
+	min-width: 1100px;
+	font-family: Arial,'Times New Roman','Microsoft YaHei',SimHei;
+}
+ul{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+.top{
+	height: 30px;
+	background-color: #354050;
+}
+.top div{
+	width: 1100px;
+	height: 100%;
+	margin: 0 auto;
+}
+.top .name{
+	float: left;
+	font-size: 12px;
+	color: #fff;
+	line-height: 30px;
+}
+.top .tel{
+	float: right;
+	font-size: 12px;
+	color: #fff;
+	line-height: 30px;
+}
+/*导航*/
+.nav{
+	width: 1100px;
+	height: 78px;
+	background-color: #fff;
+	margin: 0 auto;
+	position: relative;
+}
+.nav .logo{
+	float: left;
+	width: 320px;
+	height: 65px;
+	margin-top: 6px;
+	vertical-align: top;
+	background: url(../images/index/logo.jpg) no-repeat;
+	background-size: 100% 100%;
+}
+.nav .navList{
+	float: right;
+}
+.nav .navList li{
+	float: left;
+	height: 78px;
+	width: 92px;
+	margin-left: 18px;
+	font-size: 14px;
+	color: #666;
+	line-height: 78px;
+	text-align: center;
+	cursor: pointer;
+	vertical-align: top;
+}
+.nav .navList li a{
+	display: block;
+	height: 100%;
+	color: #666;
+}
+/*.nav .navList .active,*/
+.nav .navList .addBack a,
+.nav .navList li:hover{
+	color: #fff;
+	background-color: #005a99;
+}
+.nav .navList li:hover a{
+	color: #fff;
+}
+.WebMenu{
+	position: absolute;
+	left: 458px;
+	top: 78px;
+	width: 372px;
+	height: 252px;
+	background-color: #005a99;
+	display: none;
+	z-index: 99;
+}
+.WebMenu .list{
+	display: inline-block;
+	vertical-align: top;
+	width: 124px;
+}
+.WebMenu .list div{
+	width: 100%;
+	height: 44px;
+	line-height: 44px;
+	color: #fff;
+	font-size: 12px;
+	text-align: center;
+	vertical-align: top;
+	font-weight: bold;
+}
+.WebMenu .list .h1{
+	background: url(../images/index/we1.png) no-repeat;
+	background-position: 4px 13px;
+}
+.WebMenu .list .h2{
+	background: url(../images/index/we2.png) no-repeat;
+	background-position: 4px 13px;
+}
+.WebMenu .list .h3{
+	background: url(../images/index/we3.png) no-repeat;
+	background-position: 4px 13px;
+}
+.WebMenu ul{
+	margin-top: 4px;
+}
+.WebMenu li{
+	font-size: 12px;
+	color: #fff;
+	cursor: pointer;
+	line-height: 24px;
+	text-align: center;
+}
+.WebMenu li a {
+    display: block;
+    color: #fff;
+    height: 100%;
+    overflow: hidden;
+}
+/*banner*/
+.banner{
+	width: 100%;
+	min-width: 1100px;
+	height: 616px;
+	position: relative;
+}
+.banner .images{
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+.banner .images li{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: none;
+}
+.banner .images li img{
+	width: 100%;
+	height: 100%;
+}
+.banner .sign{
+	position: absolute;
+	bottom: 15px;
+	width: 100%;
+	height: 25px;
+	text-align: center;
+}
+.banner .sign li{
+	display: inline-block;
+	width: 60px;
+	height: 6px;
+	background-color: rgba(255,255,255,.3);
+	margin: 0 4px;
+	cursor: pointer;
+}
+.banner .sign .active{
+	background-color: #fff;
+}
+/* 底部导航 */
+.bottomNav{
+	width: 100%;
+	min-width: 1100px;
+	margin-top: 20px;
+	height: 392px;
+	background-color: #2c2c2c;
+}
+.bottomNav .box{
+	width: 1200px;
+	height: 100%;
+	margin: 0 auto;
+}
+.bottomNav .list{
+	display: inline-block;
+	width: 275px;
+	vertical-align: top;
+	margin-top: 48px;
+}
+.bottomNav .list .tit{
+	color: #fff;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 46px;
+	height: 46px;
+	padding-left: 4px;
+	text-align: left;
+}
+.bottomNav .list li{
+	font-size: 12px;
+	line-height: 12px;
+	margin-top: 25px;
+	padding-left: 4px;
+}
+.bottomNav .list li a{
+	color: #8b8b8b;
+	text-decoration: none;
+}
+/*底部*/
+.bottomLink{
+	width: 100%;
+	min-width: 1100px;
+	height: 208px;
+	background-color: #131313;
+}
+.bottomLink .box{
+	width: 1100px;
+	height: 100px;
+	margin: 0 auto;
+}
+.bottomLink .link{
+	height: 106px;
+	border-bottom: 1px solid #8b8b8b;
+}
+.bottomLink .link .tit{
+	display: inline-block;
+	width: 206px;
+	height: 106px;
+	line-height: 106px;
+	font-size: 14px;
+	font-weight: bold;
+	color: #fff;
+	text-align: center;
+	vertical-align: top;
+	margin-left: 50px;
+}
+.bottomLink .link .text{
+	display: inline-block;
+	width: 750px;
+	height: 40px;
+	margin-top: 33px;
+	vertical-align: top;
+	font-size: 12px;
+	line-height: 20px;
+	color: #8b8b8b;
+}
+.bottomLink .link .text a{
+	text-decoration: none;
+	color: #8b8b8b;
+}
+.bottomLink .cop{
+	font-size: 12px;
+	color: #8b8b8b;
+	line-height: 106px;
+	text-align: center;
+}
+/*底部-end*/
+/*简介-start*/
+.aboutUs{
+	width: 100%;
+	background-color: #2c2c2c;
+}
+.aboutUs-cont{
+	width: 1200px;
+	margin: 0 auto;
+	overflow: hidden;
+	padding-top:20px;
+	padding-bottom:34px;
+}
+.aboutUs-left{
+	float: left;
+}	
+.aboutUs-right{
+	float: left;
+	width: 900px;
+	margin-left: 40px;
+	margin-top:30px;
+}
+.aboutUs-right p{
+	color:#e0be8d;
+	font-size: 15px;
+	line-height: 32px;
+	text-indent: 2em;
+}
+/*简介-end*/
+/*简介图片-start*/
+.aboutusImg-cont{
+    width: 1200px;
+    margin:50px auto 45px;
+}
+.aboutusImg-cont ul{
+	overflow: hidden;
+}
+.aboutusImg-cont li{
+	transition: all .2s linear;
+	-moz-transition: all .2s linear;
+	-webkit-transition: all .2s linear;
+	-o-transition: all .2s linear;
+}
+.aboutusImg-cont li:hover{
+    box-shadow: 0 3px 20px rgba(0, 0, 0, .1);
+	transform: translate3d(0px, -4px, 10px);
+	-ms-transform: translate3d(0px, -4px, 10px);
+	-moz-transform: translate3d(0px, -4px, 10px);
+	-webkit-transform: translate3d(0px, -4px, 10px);
+	-o-transform: translate3d(0px, -4px, 10px);
+}
+.aboutusImg1{
+	float: left;
+	width: 266px;
+	height: 278px;
+    background: url(../images/aboutusImg1.png) no-repeat bottom left;
+}
+.aboutusImg2{
+	float: left;
+	width: 266px;
+	height: 278px;
+	margin-left: 40px;
+    background: url(../images/aboutusImg2.png) no-repeat bottom left;
+}
+.aboutusImg3{
+	float: left;
+	width: 266px;
+	height: 278px;
+	margin-left: 40px;
+    background: url(../images/aboutusImg2.png) no-repeat bottom left;
+}
+.aboutusImg4{
+	float: left;
+	width: 266px;
+	height: 278px;
+	margin-left: 40px;
+    background: url(../images/aboutusImg2.png) no-repeat bottom left;
+}
+.aboutusImg-cont ul h1{
+	text-align: center;
+	color:#333;
+	font-size: 22px;
+	margin-top:1px;
+}
+/*简介图片-end*/
+/*整体背景内容-start*/
+.allBgd{
+	width: 100%;
+	height: 3786px;
+	background: url(../images/allBgd.png) no-repeat top center;
+	/*background-position: top center;*/
+	background-size: 100% 100%;
+}
+/*整体背景内容-end*/ 
+/* 服务范围-start*/
+.service{
+	width: 1200px;
+	margin:0 auto;
+	padding-top:54px;
+}
+.serviceTitle-hot{
+	display: inline-block;
+	width: 70px;
+	height: 30px;
+	border-radius: 6px;
+	background-color:#cca162;
+	text-align: center;
+}
+.serviceTitle-hot span{
+	display: inline-block;
+	color:#fff;
+	font-size: 20px;
+	line-height: 30px;
+}
+.service-around{
+	margin-left: 10px;
+	color:#333;
+	font-size: 24px;
+}
+.serviceTitle p{
+	color:#333;
+	font-size:14px;
+	margin-top:10px; 
+}
+.titleBtn{
+	text-align: right;
+}
+.titleBtn a{
+	display: inline-block;
+	border:1px solid #999999;
+	width: 82px;
+	height: 24px;
+	color:#333;
+	font-size: 14px;
+	text-align: center;
+	line-height: 24px;
+}
+.serviceDetail{
+	margin-top:58px;
+	overflow: hidden;
+}
+.serviceDetail-left{
+	float: left;
+	width:396px;
+	height: 522px; 
+}
+.serviceDetail-right{
+	float: right;
+}
+.serviceDetail-right ul li{
+	float: left;
+	width: 260px;
+	height: 260px;
+	background:url(../images/serviceDetail-right1.png) no-repeat;
+	text-align: center;
+}
+.serviceDetail-right ul li p{
+	color:#fff;
+	font-size:30px;
+	font-weight: 700;
+	margin-top:78px;
+	margin-bottom:15px;
+}
+.serviceDetail-right ul li a{
+	display: inline-block;
+	width: 112px;
+	height: 35px;
+	border-radius: 6px;
+	border:1px solid #cca162;
+	line-height: 35px;
+	text-align: center;
+	color:#cca162;
+	font-size:14px;
+}
+.serviceDetail-right2,.serviceDetail-right3{
+	margin-left: 6px;
+}
+.serviceDetail-right ul .serviceDetail-right2{
+    background:url(../images/serviceDetail-right2.png) no-repeat;	
+}
+.serviceDetail-right ul .serviceDetail-right3{
+    background:url(../images/serviceDetail-right3.png) no-repeat;	
+}
+.serviceDetail-bottom li{
+	margin-top:4px;
+}
+.serviceDetail-bottom .serviceDetail-right1{
+    background:url(../images/serviceDetail-right4.png) no-repeat;	
+}
+.serviceDetail-right .serviceDetail-bottom .serviceDetail-right2{
+    background:url(../images/serviceDetail-right5.png) no-repeat;	
+}
+.serviceDetail-right .serviceDetail-bottom .serviceDetail-right3{
+    background:url(../images/serviceDetail-right6.png) no-repeat;	
+}
+/* 服务范围-end*/
+/* 定制流程-start*/
+.CustomProcess{
+	width: 1200px;
+	margin:0 auto;
+	padding-top:170px;
+}
+.CustomProcess-cont{
+	margin-top:60px;
+	height: 330px;
+	background: url(../images/CustomProcess.png) no-repeat top center;
+}
+.CustomProcess-list p{
+    display: inline-block;
+    width: 150px;
+    text-align: center;
+    color:#cca162;
+    font-size:18px;
+    margin-top:108px;
+    margin-left: 200px;
+}
+.CustomProcess-list .CustomProcess-list3{
+	margin-left: 193px;
+}
+.CustomProcess-list .CustomProcess-list1{
+	margin-left: 0;
+}
+.CustomProcess-cont .CustomProcess-listR{
+	text-align: right;
+	margin-top:80px;
+}
+/* 定制流程-end*/
+/* 经典案例-start*/
+.example{
+	width: 1200px;
+	margin:0 auto;
+	margin-top:154px;
+}
+.allEp{
+	margin-top:60px;
+	overflow: hidden;
+}
+.allEp-left{
+	float: left;
+	width: 678px; 
+}
+.allEp-left img{
+	border:4px solid #cca162;
+}
+.allEp-left h1{
+	color:#333;
+	font-size:16px;
+	margin-top:12px; 
+}
+.allEp-left p{
+	color:#241500;
+	font-size: 14px;
+	line-height: 24px;
+	margin-top:4px;
+	text-indent: 2em;
+}
+.allEp-right{
+	float: right;
+}
+.allEp-right1{
+    width: 446px;
+}
+.allEp-right1 img{
+	height: 188px;
+	border:4px solid #cca162;
+}
+.allEp-right1 h1{
+	color:#333;
+	font-size:16px;
+	margin-top:12px; 
+}
+.allEp-right1 p{
+	color:#241500;
+	font-size: 14px;
+	line-height: 24px;
+	margin-top:4px;
+	text-indent: 2em;
+}
+.allEp-right2{
+	margin-top:30px;
+}
+.pages{
+	text-align: right;
+	margin-right: 24px;
+}
+.page-left{
+	margin-right: 5px;
+}
+/* 经典案例-end*/
+/* 口碑评价-start*/
+.evaluate{
+    width: 1200px;
+	margin:0 auto;
+	margin-top:134px;	
+}
+.evaluate ul{
+	overflow: hidden;
+	margin-top: 20px;
+}
+.evaluate li{
+	float: left;
+	width: 292px;
+	height: 440px;
+	margin-right: 10px;
+	vertical-align: top;
+}
+.evaluate ul .last{
+	margin-right: 0;
+}
+.evaluate li a{
+	display: block;
+	height: 100%;
+}
+.evaluate li .img{
+	height: 288px;
+}
+.evaluate li .img img{
+	width: 100%;
+	height: 100%;
+}
+.evaluate li .person{
+	height: 52px;
+	margin: 5px 0 0 5px;
+}
+.evaluate li .person span{
+	float: left;
+	width: 52px;
+	height: 52px;
+	vertical-align: top;
+	border-radius: 50%;
+	overflow: hidden;
+}
+.evaluate li .person p{
+	font-size: 16px;
+	color: #000;
+	line-height: 52px;
+	vertical-align: top;
+}
+.evaluate li .text{
+	font-size: 16px;
+	color: #333;
+	padding-left: 40px;
+	line-height: 40px;
+}
+/* 口碑评价-end*/
+/* 贴心服务-start*/
+.hertService{
+	width: 1200px;
+	margin: 0 auto;
+	margin-top: 106px;
+}
+.hertService .left{
+	display: inline-block;
+	width: 570px;
+	vertical-align: top;
+}
+.hertService .right{
+	display: inline-block;
+	width: 620px;
+	margin-left: 10px;
+	vertical-align: top;
+}
+.hertService .left img{
+	width: 530px;
+	height: 230px;
+	border: 2px solid #cca162;
+}
+.hertService .left .h1{
+	font-size: 18px;
+	color: #cca162;
+	margin-top: 10px;
+	line-height: 38px;
+}
+.hertService .left .t{
+	font-size: 14px;
+	line-height: 24px;
+	color: #333;
+}
+.hertService .left .btn{
+	display: inline-block;
+	width: 106px;
+	height: 36px;
+	background-color:#cca162;
+	text-align: center;
+	line-height: 36px;
+	color: #fff;
+	font-size: 14px; 
+	margin-top: 10px;
+}
+.hertService .right li .n{
+	display: inline-block;
+	width: 100px;
+	height: 97px;
+	background-color: #cca162;
+	color: #fff;
+	text-align: center;
+	line-height: 97px;
+	font-size: 42px;
+	vertical-align: top;
+}
+.hertService .right li .t{
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 20px;
+	width: 500px;
+}
+.hertService .right li .t .h1{
+	font-size: 20px;
+	color: #cca162;
+	line-height: 20px;
+}
+.hertService .right li .t .h2{
+	font-size: 14px;
+	color: #333;
+	margin-top: 7px;
+	line-height: 24px;
+}
+.hertService .right .light .n{
+	background-color: #f5debc;
+	color: #b58339;
+}
+.hertService .right .light{
+	margin-top: 52px;
+}
+/* 贴心服务-end*/
+/*友情链接-start*/
+.partner{
+	width: 1200px;
+	margin: 0 auto;
+}
+.partner ul{
+	overflow: hidden;
+	margin-top: 30px;
+}
+.partner li{
+	float: left;
+	width: 183px;
+	height: 85px;
+	margin-right: 20px;
+	margin-bottom: 20px;
+}
+.partner ul .last{
+	margin-right: 0;
+}
+.partner li a{
+	display: block;
+	height: 85px;
+}
+.partner li img{
+	width: 100%;
+	height: 100%;
+}
+/*友情链接-end*/

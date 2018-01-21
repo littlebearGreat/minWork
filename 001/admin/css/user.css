@@ -194,6 +194,63 @@ a{
 	margin-left: 20px;
 	overflow: hidden;
 }
+/* 用户中心 */
+.userCenter{
+	margin-left: 38px;
+	margin-top:50px;
+}
+.userCenter-cont{
+	margin-top:10px;
+	width:1548px;
+	height: 180px;
+	border: 1px solid #e5e6ed;
+}
+.userCenter-img{
+	display: inline-block;
+	vertical-align: top;
+}
+.userCenter-img img{
+	display: inline-block;
+    width: 80px;
+    margin:30px 0 15px 200px; 
+}
+.userCenter .userCenter-cont .userCenter-img a{
+	color:#333;
+	font-size:14px;
+	display: inline-block;
+	border-radius: 6px;
+	border:1px solid #ddd;
+	padding:5px 20px;
+	text-decoration: none;
+	margin-left: 190px;
+}
+.user-name,.user-phone{
+	display: inline-block;
+	font-size:14px;
+	color:#333;
+	margin:70px 0 0 120px;
+	vertical-align:top;
+}
+.user-num{
+	display: inline-block;
+	font-size:14px;
+	color:#333;
+	margin:70px 0 0 0px;
+	vertical-align:top;
+}
+.userCenter-cont .user-password{
+	color:#333;
+	font-size:14px;
+	display: inline-block;
+	border-radius: 6px;
+	border:1px solid #ddd;
+	padding:5px 20px;
+	text-decoration: none;
+	margin-left: 190px;
+	margin:70px 0 0 250px;
+	vertical-align:top;
+	text-decoration: none;
+}
 /*客户信息*/
 .contArea .cont .uesr{
 	width: 1548px;
@@ -202,7 +259,8 @@ a{
 	margin-bottom: 50px;
 }
 .contArea .cont .uesr .tit span,
-.contArea .cont .list .tit span{
+.contArea .cont .list .tit span,
+.cont .userCenter .tit span{
 	float: left;
 	width: 3px;
 	height: 14px;
@@ -211,7 +269,8 @@ a{
 	margin-right: 8px;
 }
 .contArea .cont .uesr .tit div,
-.contArea .cont .list .tit div{
+.contArea .cont .list .tit div,
+.cont .userCenter .tit div{
 	height: 14px;
 	line-height: 14px;
 	font-size: 14px;

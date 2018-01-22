@@ -11,6 +11,10 @@ ul{
 a{
 	text-decoration: none;
 }
+p{
+	margin: 0;
+	padding: 0;
+}
 .body{
 	width: 7.66rem;
 	margin: 0 auto;
@@ -46,3 +50,409 @@ a{
 	background-color: #fff;
 }
 /*white-e*/
+/* 顶部-s */
+.top{
+    width: 100%;
+}
+.topLeft{
+	float: left;
+	margin-top:0.07rem;
+	/* width: 2.13rem; */
+	overflow: hidden;
+}
+.topLeft-all{
+	height: 0.54rem;
+    border-bottom:3px solid #cc2c2c;
+    overflow: hidden;
+}
+.topLeft-btn li{
+    float: left;
+}
+.topLeft-btn .topLeft-btn1 a{
+	display: inline-block;
+	width: 0.52rem;
+	background-color:#4a8cc1;
+	text-align: center;
+	color:#fff;
+	font-size: 0.14rem;
+	padding-top:0.18rem;
+	padding-bottom:0.06rem;
+	margin-right: 0.02rem;
+	vertical-align: top;
+	margin-bottom:0.03rem;
+}
+.topLeft-btn .topLeft-btn2 a{
+    background-color: #65ab3b;
+}
+.topLeft-btn .topLeft-btn3 a{
+    background-color: #cc2c2c;
+}
+.topLeft-btn .topLeft-btn4 a{
+    background-color: #ffde00;
+    padding: 0.03rem 0 0 0 ;
+    vertical-align: top;
+}
+.topRight{
+    float: right;
+    width: 5.35rem;
+    height: 0.52rem;
+}
+.topRight-time{
+	height: 0.16rem;
+	text-align: right;
+}
+.topRight-time p{
+	width:1.4rem;
+	background-color: #eeeeee;
+    display: inline-block;
+    line-height: 0.16rem;
+    color:#999; 
+    font-size: 0.14rem;
+    text-align: center;
+    vertical-align: top;
+    margin-top:0.02rem;
+}
+.topRight-nav{
+	height: 0.16rem;
+	margin-top:0.15rem;
+	overflow: hidden;
+}
+.topRight-nav li{
+    float: left;
+    border-right: 1px solid #999;
+    vertical-align: top;
+}
+.topRight-nav li a{
+	display: inline-block;
+	text-align: center;
+	width: 1.32rem;
+	color:#999;
+	font-size: 0.14rem;
+	line-height: 0.16rem;
+	vertical-align: top;
+}
+.topRight-nav .topRight-nav1{
+    border:none;
+}
+.topRight-nav .topRight-nav1 a span{
+	display: inline-block;
+	background-color: #e60000;
+	border-radius: 0.04rem;
+	width: 0.15rem;
+	height: 0.18rem;
+	line-height: 0.18rem;
+	color:#fff; 
+	font-size: 0.14rem;
+}
+/* 顶部-e */
+/* banner-s */
+.banner{
+	margin-top:0.07rem;
+	overflow: hidden;
+}
+.bannerLeft{
+	float: left;
+	width:2.1rem; 
+	font-size: 0;
+}
+.bannerLeft-top{
+	height: 0.05rem;
+	background-color: #ffde00; 
+}
+.bannerLeft-login{
+	height:1.72rem; 
+	border-top: 1px solid #999;
+	border-bottom:1px solid #d83834;
+	background-color: #f9f9f9;
+	text-align: center;
+}
+.bannerLeft-loginImg{
+	margin-top:0.06rem;
+	vertical-align: top;
+	margin-bottom:0.1rem; 
+}
+.bannerLeft-ipt{
+	width: 2rem;
+	vertical-align: top;
+	/* margin-top: -0.6rem; */
+	overflow: hidden;
+}
+.bannerLeft-ipt input{
+	float: left;
+	display: inline-block;
+	width:1.4rem;
+	height: 0.18rem;
+	border:1px solid #b6b6b6;
+	background-color: #fff; 
+	vertical-align: top;
+	margin-left: 0.03rem;
+    margin-bottom: 0.04rem;
+}
+.bannerLeft-ipt span{
+	display: inline-block;
+    float: right;
+    vertical-align: top;
+    font-size: 0;
+}
+.bannerLeft-ipt span img{
+	display: inline-block;
+	width: 0.15rem;
+	margin-left: 0.06rem;
+	vertical-align: top;
+}
+.bannerLeft-ipt span .b-btn{
+	width: 0.5rem;
+	vertical-align: bottom;
+	margin-left: 0;
+}
+.c-password{
+	text-align: left;
+	font-size: 0.12rem;
+	overflow: hidden;
+}
+.bannerLeft-login .c-password input{
+	float: left;
+    display: inline-block;
+    width:0.12rem;
+    height: 0.12rem;
+    border:1px solid #999;
+    border-radius: 0.04rem;
+    color:#666;
+    vertical-align: middle; 
+}
+.topRight-navLogin1{
+	margin-top:0.08rem;
+}
+.topRight-navLogin1 ul li a{
+    width: auto;
+    padding:0 0.12rem;
+    font-size: 0.12rem;
+}
+.bannerRight{
+	float: right;
+	width: 5.3rem;
+}
+/* banner-e */
+/* 中间导航-s */
+.midNav{
+	width: 100%;
+	height:0.28rem;
+	border-top:1px solid #d73834;
+	border-bottom:1px solid #d73834; 
+}
+.midNav .topRight-nav{
+	margin-top:0;
+	line-height: 0.28rem;
+	background-color: #f5cdcd;
+	height: 0.28rem;
+}
+.midNav .topRight-nav li{
+	float: left;
+	width: 124px;
+	height: 0.14rem;
+	line-height: 0.14rem;
+	margin-top: 0.07rem;
+	vertical-align: middle;
+	font-size: 0;
+}
+.midNav .topRight-nav a{
+	display: inline-block;
+	line-height: 0.14rem;
+	color:#333;
+	vertical-align: top;
+}
+/* 中间导航-e */
+
+/*左边菜单-start*/
+.cont{
+	width: 100%;
+	height: 6rem;
+	margin: 0.12rem 0;
+}
+.menu{
+	float: left;
+	width: 1rem;
+	vertical-align: top;
+}
+.menu .h1{
+	font-size: 0.12rem;
+	color: #cd2c2c;
+}
+.menu li{
+	height: 0.12rem;
+	margin-top: 0.2rem;
+	cursor: pointer;
+}
+.menu li span{
+	float: left;
+	width: 0.12rem;
+	height: 0.12rem;
+	position: relative;
+}
+.menu li span img{
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+}
+.menu li p{
+	font-size: 0.12rem;
+	color: #333;
+	line-height: 0.12rem;
+}
+/*左边菜单-end*/
+/*当前小球-start*/
+.ball{
+	float: right;
+	width: 6.36rem;
+}
+.ball .nowBall,
+.ball .lastBall{
+	font-size: 0;
+	width: 100%;
+	border: 1px solid #cd2c2c;
+}
+.ball .nowBall{
+	height: 1.74rem;
+}
+.ball .nowBall .h1,
+.ball .lastBall .h1{
+	line-height: 0.26rem;
+	font-size: 0.14rem;
+	padding-left: 0.12rem;
+	color: #fff;
+	background-color: #cd2c2c;
+}
+.ball .nowBall .l{
+	display: inline-block;
+	width: 4.44rem;
+	height: 1.46rem;
+}
+.ball .nowBall .l table,
+.ball .nowBall .r table{
+	width: 100%;
+	table-layout: fixed;
+	text-align: center;
+	margin-top: 0.14rem;
+}
+.ball .nowBall .l table td,
+.ball .nowBall .r table td{
+	height: 0.2rem;
+	font-size: 0.14rem;
+	color: #333;
+}
+.ball .nowBall .l .h2{
+	font-size: 0.14rem;
+	color: #333;
+	text-align: center;
+	line-height: 0.38rem;
+}
+.ball .nowBall .l .round{
+	height: 0.38rem;
+	overflow: hidden;
+	font-size: 0;
+}
+.ball .nowBall .l .round .tit{
+	display: inline-block;
+	width: 0.74rem;
+	margin-left: 0.06rem;
+	vertical-align: top;
+}
+.ball .nowBall .l .round .tit p{
+	font-size: 0.12rem;
+	line-height: 0.19rem;
+	text-align: center;
+	color: #333;
+}
+.ball .nowBall .l .round .roundBox{
+	display: inline-block;
+	width: 3.6rem;
+	vertical-align: top;
+	height: 0.38rem;
+	overflow: hidden;
+}
+.ball .nowBall .l .round .roundBox>div{
+	font-size: 0;
+	float: left;
+	width: 0.38rem;
+	height: 3.8rem;
+	margin: 0 0.08rem;
+	position: relative;
+	vertical-align: top;
+}
+.ball .nowBall .l .round .roundBox>.plus{
+	width: 0.2rem;
+	font-size: 0.24rem;
+	color: #333;
+	line-height: 0.38rem;
+	height: 0.38rem;
+}
+.ball .nowBall .l .round .roundBox ul{
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.ball .nowBall .l .round .roundBox li{
+	width: 0.38rem;
+	height: 0.38rem;
+}
+.ball .nowBall .l .round .roundBox li img{
+	width: 100%;
+	height: 100%;
+}
+.ball .nowBall .r{
+	display: inline-block;
+	width: 1.9rem;
+	overflow: hidden;
+	vertical-align: top;
+}
+/*当前小球-end*/
+/*历史小球-end*/
+.ball .lastBall{
+	height: 4.32rem; 
+	margin-top: 0.1rem;
+}
+.ball .lastBall .line{
+	margin-left: 0.3rem;
+	margin-top: 0.1rem;
+	overflow: hidden;
+}
+.ball .lastBall .line>li{
+	height: 0.36rem;
+	margin-top: 0.05rem;
+}
+.ball .lastBall .line>li>span{
+	float: left;
+	width: 1rem;
+	font-size: 0.14rem;
+	color: #333;
+	line-height: 0.36rem;
+	vertical-align: top;
+}
+.ball .lastBall .line .one{
+	display: inline-block;
+	width: 3.4rem;
+	vertical-align: top;
+	height: 0.36rem;
+}
+.ball .lastBall .line .one li{
+	float: left;
+	width: 0.36rem;
+	height: 0.36rem;
+	margin: 0 0.08rem;
+	vertical-align: top;
+}
+.ball .lastBall .line .one li img{
+	width: 100%;
+	height: 100%;
+}
+.ball .lastBall .line .one .plus{
+	width: 0.1rem;
+	font-size: 0.16rem;
+	line-height: 0.36rem;
+	color: #333;
+	text-align: center;
+}
+/*历史小球-end*/

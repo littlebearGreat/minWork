@@ -7,8 +7,19 @@ ul{
 	list-style: none;
 }
 .body{
-	width: 7.64rem;
-	height: 200px;
+	width: 7.66rem;
 	margin: 0 auto;
-	background-color: #fff;
+	margin-bottom: 0.2rem;
 }
+/*顶部导航-s*/
+.topNav{
+	height: 0.4rem;
+}
+.topNav li{
+	float: left;
+	font-size: 0.12rem;
+	line-height: 0.4rem;
+	color: #fff;
+	padding: 0 0.18rem;
+}
+/*顶部导航-e*/

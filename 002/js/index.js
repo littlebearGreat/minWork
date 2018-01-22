@@ -34,3 +34,7 @@ function resize() {
     a()
 };
 resize();
+
+$(function(){
+
+})

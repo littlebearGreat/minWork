@@ -17,7 +17,7 @@ a{
 }
 /*样式初始化--结束*/
 .body{
-	width: 1920px;
+	width: 1680px;
 	margin: 0 auto;
 }
 /*侧边栏*/
@@ -548,4 +548,23 @@ table td{
 }
 .sideBar li a>div{
 	height: 100%;
+}
+/*订单状态分类*/
+.state{
+	height: 30px;
+	overflow: hidden;
+	margin-top: 20px;
+	margin-left: 20px;
+}
+.state a{
+	display: inline-block;
+	vertical-align: top;
+	font-size: 16px;
+	line-height: 16px;
+	margin: 7px 20px;
+	color: #333;
+	text-decoration: none;
+}
+.state .active{
+	color: #0097ed;
 }

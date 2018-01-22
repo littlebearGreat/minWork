@@ -1,0 +1,14 @@
+body{
+	margin: 0;
+	padding: 0;
+	background-color: #003b7f;
+}
+ul{
+	list-style: none;
+}
+.body{
+	width: 7.64rem;
+	height: 200px;
+	margin: 0 auto;
+	background-color: #fff;
+}

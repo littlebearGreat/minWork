@@ -5,6 +5,11 @@ body{
 }
 ul{
 	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+a{
+	text-decoration: none;
 }
 .body{
 	width: 7.66rem;
@@ -18,8 +23,26 @@ ul{
 .topNav li{
 	float: left;
 	font-size: 0.12rem;
-	line-height: 0.4rem;
+	margin-top: 0.14rem;
+	vertical-align: top;
+	border-left: 1px solid #fff;
+}
+.topNav li a{
+	padding: 0 0.21rem;
+	line-height: 0.12rem;
 	color: #fff;
-	padding: 0 0.18rem;
+}
+.topNav .noB{
+	border: none;
+}
+.topNav .col a{
+	color: #99b1cc;
 }
 /*顶部导航-e*/
+/*white-s*/
+.white{
+	width: 7.52rem;
+	padding: 0.07rem;
+	background-color: #fff;
+}
+/*white-e*/

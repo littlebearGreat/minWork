@@ -1,5 +1,7 @@
 // index.js
-
+var sp = true;
+var isFirst = true;
+var animateTime = 3000;		/*改变动画时间的话就改变此参数*/
 // 判断是否是PC打开的
 function IsPC() {
 	var userAgentInfo = navigator.userAgent;
@@ -11,6 +13,7 @@ function IsPC() {
 	for (var v = 0; v < Agents.length; v++) {
 		if (userAgentInfo.indexOf(Agents[v]) > 0) {
 			flag = false;
+			sp = false;
 			break;
 		}
 	}
@@ -29,7 +32,7 @@ function resize() {
     }, c = null;
     window.addEventListener("resize", function () {
         clearTimeout(c);
-        c = setTimeout(a, 300)
+        c = setTimeout(a, 50)
     });
     a()
 };
@@ -61,13 +64,13 @@ $(function(){
 	};
 
 	// 滚动动画
-	function animat(n,top){
+	function animat(n,top,time){
 		var ul = $('.ball .nowBall .l .round .roundBox ul');
-		ul.eq(n).animate({'top':top},3000);
+		ul.eq(n).animate({'top':top},time);
 	};
 
 	// 处理动画要的数据,并执行动画
-	function round(codeString){	/*codeString：中奖码字符串*/
+	function round(codeString,time){	/*codeString：中奖码字符串*/
 		var c = codeString;
 		var n1 = Number(codeString[0]),
 			n2 = Number(codeString[1]),
@@ -84,12 +87,12 @@ $(function(){
 			t4 = h * n5,
 			t5 = h * n6;
 
-		animat(0,t0);
-		animat(1,t1);
-		animat(2,t2);
-		animat(3,t3);
-		animat(4,t4);
-		animat(5,t5);
+		animat(0,t0,time);
+		animat(1,t1,time);
+		animat(2,t2,time);
+		animat(3,t3,time);
+		animat(4,t4,time);
+		animat(5,t5,time);
 		console.log(h);
 	};
 
@@ -129,18 +132,23 @@ $(function(){
 
 		        var t = da.surplusTime;	/*倒计时剩余时间*/
 
-		        round(da.codeList[0].code);	/*动画*/
-
-		        // 延迟显示历史（动画完成后再显示）
-		        setTimeout(function(){
-			        history(da.codeList);
-		        },3000);
+		        if (isFirst) {
+		        	round(da.codeList[0].code,0);	/*动画*/
+					history(da.codeList);
+		        }else{
+			        round(da.codeList[0].code,animateTime);	/*动画*/
+			        // 延迟显示历史（动画完成后再显示）
+			        setTimeout(function(){
+				        history(da.codeList);
+			        },animateTime);
+		        };
 
 		        // 定时器
 				var inter = setInterval(function(){
 					t--;
 					sTime(t);
 					if (t<=0) {
+						isFirst = false;
 						clearInterval(inter);
 						getData();
 					};
@@ -152,12 +160,17 @@ $(function(){
 	getData();
 
 	// 日期选择框
-	$("#date").mobiscroll({
-        preset:'date',
-        theme: 'android-ics light',
-        lang: 'zh',
-        display: 'bottom',
-    });
+	if (sp) {
+		var options = {dateInputNode:$("#date")};
+		var instance = new BeatPicker(options)
+	}else{
+		$("#date").mobiscroll({
+	        preset:'date',
+	        theme: 'android-ics light',
+	        lang: 'zh',
+	        display: 'bottom',
+	    });
+	};
 
     //	点击“查询更多”按钮
     $('#hist').click(function(){
@@ -203,5 +216,9 @@ $(function(){
     		}
     	})
     })
+
+    // banner轮播图
+	$("#scroller").simplyScroll({orientation:'vertical',customClass:'vert'});
+
 
 })

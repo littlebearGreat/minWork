@@ -46,7 +46,7 @@ $(function(){
 		}
 	};
 
-	// 倒计时
+	// 页面倒计时显示
 	function sTime(s){
 		var h = parseInt(s/3600),
 			m = parseInt(s%3600/60),
@@ -56,6 +56,7 @@ $(function(){
 		s = timeTwo(s);
 		var text = h + ':' + m + ':' + s;
 
+		// 改变页面显示
 		$('.ball .nowBall .l .h2 b').text(text);
 	};
 
@@ -66,8 +67,7 @@ $(function(){
 	};
 
 	// 处理动画要的数据,并执行动画
-	function round(codeString){
-		// 108882
+	function round(codeString){	/*codeString：中奖码字符串*/
 		var c = codeString;
 		var n1 = Number(codeString[0]),
 			n2 = Number(codeString[1]),
@@ -93,6 +93,27 @@ $(function(){
 		console.log(h);
 	};
 
+	// 显示历史中奖号码
+	function history(array){	/*参数：传入codeList*/
+		var li = $('.lastBall .line>li');
+		for (var i = 0; i < array.length; i++) {
+			var oL = li.eq(i+1),
+				data = array[i];
+			oL.children('span').eq(0).text(data.num);
+			oL.children('span').eq(1).text(data.time);
+
+			var rLi = oL.find('li'),
+				code = data.code;
+			for (var k = 0; k < rLi.length; k++) {
+				var src = 'images/' + code[k] + '.gif';
+				if (k == 5) {
+					k = 6
+				};
+				rLi.eq(k).children('img').attr('src',src);
+			}
+		}
+	};
+
 
 	// 加载页面请求数据
 	function getData(){
@@ -102,17 +123,27 @@ $(function(){
 		    success: function(data){
 		    	var da = JSON.parse(data);
 		    	console.log(da);
+
+		    	// 显示最近一次的期数
+		    	$('.ball .nowBall .l .round .tit p').eq(0).text(da.codeList[0].num);
+
 		        var t = da.surplusTime;	/*倒计时剩余时间*/
 
 		        round(da.codeList[0].code);	/*动画*/
 
+		        // 延迟显示历史（动画完成后再显示）
+		        setTimeout(function(){
+			        history(da.codeList);
+		        },3000);
+
+		        // 定时器
 				var inter = setInterval(function(){
 					t--;
 					sTime(t);
 					if (t<=0) {
 						clearInterval(inter);
 						getData();
-					}
+					};
 				},1000);
 
 		    }
@@ -120,22 +151,57 @@ $(function(){
 	};
 	getData();
 
-	var a = {
-		"codeList":[
-			{"date":1516631700,"time":"01\/22 22:35","num":180122163,"code":"153372"},
-			{"date":1516631400,"time":"01\/22 22:30","num":180122162,"code":"351209"},
-			{"date":1516631100,"time":"01\/22 22:25","num":180122161,"code":"157419"},
-			{"date":1516630800,"time":"01\/22 22:20","num":180122160,"code":"826857"},
-			{"date":1516630500,"time":"01\/22 22:15","num":180122159,"code":"730027"},
-			{"date":1516630200,"time":"01\/22 22:10","num":180122158,"code":"193765"},
-			{"date":1516629900,"time":"01\/22 22:05","num":180122157,"code":"072358"},
-			{"date":1516629600,"time":"01\/22 22:00","num":180122156,"code":"142960"},
-			{"date":1516629300,"time":"01\/22 21:55","num":180122155,"code":"577839"},
-			{"date":1516629000,"time":"01\/22 21:50","num":180122154,"code":"718572"}
-		],
-		"nextNum":180122164,
-		"date":1516631821,
-		"surplusTime":179
-	};
+	// 日期选择框
+	$("#date").mobiscroll({
+        preset:'date',
+        theme: 'android-ics light',
+        lang: 'zh',
+        display: 'bottom',
+    });
+
+    //	点击“查询更多”按钮
+    $('#hist').click(function(){
+    	$('#historyCont').show();
+    })
+
+    // 历史记录框关闭按钮
+    $('#close').click(function(){
+    	$('#historyCont').hide();
+    	$('#historyCont tbody').children().remove();
+    	$('#date').val('');
+
+    })
+
+    // 点击弹窗中的查询按钮
+    $('#historyCont .btn').click(function(){
+    	var time = $('#date').val();
+    	console.log(time);
+    	if (!time) {
+    		layer.alert('请选择查询时间');
+    		return false;
+    	};
+
+    	$.ajax({
+    		url: 'http://demo.wikcms.com/codelist.php?date=' + time,
+    		success: function(data){
+    			var d = JSON.parse(data);
+    			var list = d.codeList;
+    			for (var i = 0; i < list.length; i++) {
+    				var tr = $('<tr>'),
+    					td1 = $('<td>'),
+    					td2 = $('<td>'),
+    					td3 = $('<td>');
+    				td1.text(list[i].num);
+    				td2.text(list[i].time);
+    				td3.text(list[i].code);
+    				tr.append(td1,td2,td3);
+    				$('#historyCont tbody').append(tr);
+    			};
+    		},
+    		error: function(){
+    			layer.alert('查询失败')
+    		}
+    	})
+    })
 
 })

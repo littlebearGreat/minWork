@@ -100,7 +100,7 @@ a{
 .contArea{
 	display: inline-block;
 	width: 1680px;
-	height: 1000px;
+	height: 1100px;
 	vertical-align: top;
 	overflow: hidden;
 	background-color: #f0f1f6;
@@ -187,7 +187,7 @@ a{
 /*内容*/
 .contArea .cont{
 	width: 1630px;
-	height: 874px;
+	height: 974px;
 	background-color: #fff;
 	border-radius: 4px;
 	margin-top: 20px;
@@ -568,3 +568,81 @@ table td{
 .state .active{
 	color: #0097ed;
 }
+/*页码-start*/
+.page{
+	margin-top: 60px;
+	text-align: center;
+}
+.page ul{
+	display: inline-block;
+	height: 40px;
+}
+.page li{
+	float: left;
+	text-align: center;
+	margin: 0 11px;
+	cursor: pointer;
+	color: #878787;
+}
+.page .border{
+	border: 1px solid #dcdcdc;
+	height: 40px;
+}
+.page .sm{
+	font-size: 22px;
+	line-height: 40px;
+	color: #878787;
+	width: 40px;
+	background-color: #f7f7f7;
+}
+.page .last,
+.page .next{
+	width: 40px;
+}
+.page .last{
+	background: url(../images/lastPage.png) no-repeat;
+	background-position: 16px 12px;
+}
+.page .next{
+	background: url(../images/nextPage.png) no-repeat;
+	background-position: 16px 12px;
+}
+.page .total{
+	font-size: 14px;
+	line-height: 40px;
+	width: 74px;
+	padding-right: 16px;
+	background: url(../images/nextPage.png) no-repeat;
+	background-position: 58px 12.5px;
+}
+.page .jump{
+	font-size: 18px;
+	color: #0197ee;
+	line-height: 40px;
+}
+.page .text{
+	font-size: 18px;
+	color: #acacac;
+	line-height: 40px;
+	cursor: default;
+	margin-left: 0;
+}
+.page .ipt{
+	font-size: 0;
+	width: 44px;
+}
+.page .ipt input{
+	width: 42px;
+	border: none;
+	outline: none;
+	height: 38px;
+	line-height: 38px;
+	font-size: 22px;
+	text-align: center;
+}
+.page .active{
+	border: none;
+	background-color: #fff;
+	color: #f00;
+}
+/*页码-end*/

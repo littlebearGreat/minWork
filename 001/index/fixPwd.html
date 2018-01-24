@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>找回密码</title>
+		<link rel="stylesheet" type="text/css" href="css/fixPwd.css"/>
+	</head>
+	<body>
+		<div class="pwd-box" id="fixPwd">
+			<div class="pwd-title">找回密码</div>
+			<form action="" method="post" onsubmit="return fixPwdCheck()">
+				<div class="pwd-li">
+					<label>账号</label>
+					<input type="text" class="input" placeholder="请输入您的手机号码" id="pwdMobile" onblur="checkMobile('pwdMobile')" />
+					<span class="pwd-pro"></span> <!--显示提示信息-->
+				</div>
+				<div class="pwd-li">
+					<label>验证码</label>
+					<input type="text" class="code-inp input" onblur="checkInpCode(this)" placeholder="请输入您的验证码" />
+					<input type="button" class="code-btn" value="发送验证码" id="sendCodePwd"/>
+					<span class="pwd-pro"></span>
+				</div>
+				<div class="pwd-li">
+					<label>新密码</label>
+					<input type="password" id="first-pwd" class="input" onblur="checkPwd(this)" placeholder="请输入您的6-16位字母和数字组合密码" />
+					<span class="pwd-pro"></span>
+				</div>
+				<div class="pwd-li">
+					<label>确认密码</label>
+					<input type="password" id="second-pwd" class="input" onblur="checkPwd(this)" placeholder="请再次输入密码" />
+					<span class="pwd-pro"></span>
+				</div>
+				<div class="btn-box">
+					<input type="submit" value="确认" class="save-pwd"/>
+				</div>
+			</form>
+		</div>
+		<script type="text/javascript" src="js/jquery.min.js" ></script>
+		<script type="text/javascript" src="js/fixPwd.js">	</script>
+	</body>
+</html>

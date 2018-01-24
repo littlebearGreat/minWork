@@ -43,6 +43,7 @@ $(function(){
 	// 设置球的高度为整数
 	$('.ball .nowBall .l .round .roundBox li').height($('.ball .nowBall .l .round .roundBox li').height());
 	$('.ball .nowBall .l .round .roundBox').height($('.ball .nowBall .l .round .roundBox li').height());
+	$('.ball .nowBall .l .round').height($('.ball .nowBall .l .round .roundBox li').height());
 
 	// 时间两位数处理
 	function timeTwo(n){
@@ -64,7 +65,7 @@ $(function(){
 		var text = h + ':' + m + ':' + s;
 
 		// 改变页面显示
-		$('.ball .nowBall .l .h2 b').text(text);
+		$('.ball .nowBall .l .h2 .b2').text(text);
 	};
 
 	// 滚动动画
@@ -96,23 +97,6 @@ $(function(){
 		ul.eq(3).css('top',T3);
 		ul.eq(4).css('top',T4);
 		ul.eq(5).css('top',T5);
-		console.log('-------------------');
-		console.log(t0);
-		console.log(t1);
-		console.log(t2);
-		console.log(t3);
-		console.log(t4);
-		console.log(t5);
-		console.log('-------------------');
-		console.log(T0);
-		console.log(T1);
-		console.log(T2);
-		console.log(T3);
-		console.log(T4);
-		console.log(T5);
-		console.log('-------------------');
-		console.log(mH);
-		console.log('-------------------');
 	};
 
 	var setTimeO = 0;
@@ -132,19 +116,19 @@ $(function(){
 		var mH = -h * 10 * 6;
 		var t0,t1,t2,t3,t4,t5;
 		if (isFirst) {
-			t0 = -(h * n1) + mH,
-			t1 = -(h * n2) + mH,
-			t2 = -(h * n3) + mH,
-			t3 = -(h * n4) + mH,
-			t4 = -(h * n5) + mH,
-			t5 = -(h * n6) + mH;
+			t0 = -(h * (9-n1)) + mH,
+			t1 = -(h * (9-n2)) + mH,
+			t2 = -(h * (9-n3)) + mH,
+			t3 = -(h * (9-n4)) + mH,
+			t4 = -(h * (9-n5)) + mH,
+			t5 = -(h * (9-n6)) + mH;
 		}else{
-			t0 = -(h * n1),
-			t1 = -(h * n2),
-			t2 = -(h * n3),
-			t3 = -(h * n4),
-			t4 = -(h * n5),
-			t5 = -(h * n6);
+			t0 = -(h * (9-n1)),
+			t1 = -(h * (9-n2)),
+			t2 = -(h * (9-n3)),
+			t3 = -(h * (9-n4)),
+			t4 = -(h * (9-n5)),
+			t5 = -(h * (9-n6));
 		};
 
 		// 时间随机数处理
@@ -155,16 +139,6 @@ $(function(){
 			time4 = time,
 			time5 = time;
 
-		// if (!isFirst) {
-		// 	time0 = Math.random() * 2000 + time,
-		// 	time1 = Math.random() * 2000 + time,
-		// 	time2 = Math.random() * 2000 + time,
-		// 	time3 = Math.random() * 2000 + time,
-		// 	time4 = Math.random() * 2000 + time,
-		// 	time5 = Math.random() * 2000 + time;
-		// };
-
-
 		if (isFirst) {
 			animat(0,t0,time0);
 			animat(1,t1,time1);
@@ -174,11 +148,11 @@ $(function(){
 			animat(5,t5,time5);
 		}else{
 			time0 = time0;
-			time1 = time2 + 3000;
-			time2 = time1 + 3000;
-			time3 = time2 + 3000;
-			time4 = time3 + 3000;
-			time5 = time4 + 3000;
+			time1 = time2 + 2500;
+			time2 = time1 + 2500;
+			time3 = time2 + 2500;
+			time4 = time3 + 2500;
+			time5 = time4 + 2500;
 
 			setTimeO = time5 + 500;
 
@@ -188,17 +162,7 @@ $(function(){
 			animat(3,t3,time3);
 			animat(4,t4,time4);
 			animat(5,t5,time5);
-
-			// setTimeout(function(){animat(1,t1,time1);},st0);
-			// setTimeout(function(){animat(2,t2,time2);},st1);
-			// setTimeout(function(){animat(3,t3,time3);},st2);
-			// setTimeout(function(){animat(4,t4,time4);},st3);
-			// setTimeout(function(){animat(5,t5,time5);},st4);
 		};
-
-
-
-		console.log(h);
 	};
 
 	// 显示历史中奖号码
@@ -207,8 +171,8 @@ $(function(){
 		for (var i = 0; i < array.length; i++) {
 			var oL = li.eq(i+1),
 				data = array[i];
-			oL.children('span').eq(0).text(data.num);
-			oL.children('span').eq(1).text(data.time);
+			oL.children('span').eq(1).text(data.num);
+			oL.children('span').eq(0).text(data.time);
 
 			var rLi = oL.find('li'),
 				code = data.code;
@@ -234,17 +198,19 @@ $(function(){
 
 		    	// 显示最近一次的期数
 		    	$('.ball .nowBall .l .round .tit p').eq(0).text(da.codeList[0].num);
+		    	$('.ball .nowBall .l .h2 div .b1').eq(0).text(da.codeList[0].num);
 
 		        var t = da.surplusTime;	/*倒计时剩余时间*/
-		        t = 25;
 
 		        if (isFirst) {
 		        	round(da.codeList[0].code,0);	/*动画*/
 					history(da.codeList);
 		        }else{
+		        	$('.ball .nowBall .l .h2 div').show();
 			        round(da.codeList[0].code,animateTime);	/*动画*/
 			        // 延迟显示历史（动画完成后再显示）
 			        setTimeout(function(){
+			        	$('.ball .nowBall .l .h2 div').hide();
 				        history(da.codeList);
 				        resizeL();
 			        },setTimeO);
@@ -295,7 +261,6 @@ $(function(){
     // 点击弹窗中的查询按钮
     $('#historyCont .btn').click(function(){
     	var time = $('#date').val();
-    	console.log(time);
     	if (!time) {
     		layer.alert('请选择查询时间');
     		return false;
@@ -311,8 +276,8 @@ $(function(){
     					td1 = $('<td>'),
     					td2 = $('<td>'),
     					td3 = $('<td>');
-    				td1.text(list[i].num);
-    				td2.text(list[i].time);
+    				td1.text(list[i].time);
+    				td2.text(list[i].num);
     				td3.text(list[i].code);
     				tr.append(td1,td2,td3);
     				$('#historyCont tbody').append(tr);

@@ -157,14 +157,15 @@ p{
 }
 .bannerLeft-top{
 	height: 0.05rem;
-	background-color: #ffde00; 
+	background-color: #d83834; 
 }
 .bannerLeft-login{
-	height:1.72rem; 
+	height:1.27rem; 
 	border-top: 1px solid #999;
 	border-bottom:1px solid #d83834;
 	background-color: #f9f9f9;
 	text-align: center;
+	padding-top: .45rem;
 }
 .bannerLeft-loginImg{
 	margin-top:0.06rem;
@@ -174,18 +175,17 @@ p{
 .bannerLeft-ipt{
 	width: 2rem;
 	vertical-align: top;
-	/* margin-top: -0.6rem; */
 	overflow: hidden;
 }
 .bannerLeft-ipt input{
 	float: left;
 	display: inline-block;
-	width:1.4rem;
+	width:1.2rem;
 	height: 0.18rem;
 	border:1px solid #b6b6b6;
 	background-color: #fff; 
 	vertical-align: top;
-	margin-left: 0.03rem;
+	margin-left: 0.18rem;
     margin-bottom: 0.04rem;
 }
 .bannerLeft-ipt span{
@@ -193,6 +193,7 @@ p{
     float: right;
     vertical-align: top;
     font-size: 0;
+    margin-right: .04rem;
 }
 .bannerLeft-ipt span img{
 	display: inline-block;
@@ -209,6 +210,7 @@ p{
 	text-align: left;
 	font-size: 0.12rem;
 	overflow: hidden;
+	margin-left: .15rem;
 }
 .bannerLeft-login .c-password input{
 	float: left;
@@ -221,11 +223,12 @@ p{
     vertical-align: middle; 
 }
 .topRight-navLogin1{
-	margin-top:0.08rem;
+	margin-top:0.18rem;
+	margin-left: .1rem;
 }
 .topRight-navLogin1 ul li a{
     width: auto;
-    padding:0 0.12rem;
+    padding:0 0.1rem;
     font-size: 0.12rem;
 }
 .bannerRight{
@@ -348,8 +351,13 @@ p{
 	width: 100%;
 	border: 1px solid #cd2c2c;
 }
+.ball .lastBall{
+	border-color: #efefef;
+	border-bottom: 3px solid #efefef;
+}
 .ball .nowBall{
 	height: 1.74rem;
+	border-bottom: 3px solid #cd2c2c;
 }
 .ball .nowBall .h1,
 .ball .lastBall .h1{
@@ -358,6 +366,11 @@ p{
 	padding-left: 0.12rem;
 	color: #fff;
 	background-color: #cd2c2c;
+	font-weight: bold;
+}
+.ball .lastBall .h1{
+	color: #b3141a;
+	background-color: #f1f1f1;
 }
 .ball .nowBall .l{
 	display: inline-block;
@@ -382,6 +395,19 @@ p{
 	color: #333;
 	text-align: center;
 	line-height: 0.38rem;
+	position: relative;
+}
+.ball .nowBall .l .h2 div{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	background-color: #fff;
+	font-size: .14rem;
+	line-height: .38rem;
+	text-align: center;
+	display: none;
 }
 .ball .nowBall .l .round{
 	height: 0.38rem;
@@ -430,7 +456,7 @@ p{
 }
 .ball .nowBall .l .round .roundBox li{
 	width: 0.38rem;
-	height: 0.38rem;
+	height: 0.42rem;
 }
 .ball .nowBall .l .round .roundBox li img{
 	width: 100%;
@@ -445,12 +471,13 @@ p{
 /*当前小球-end*/
 /*历史小球-end*/
 .ball .lastBall{
-	height: 5rem; 
+	height: 4.4rem; 
 	margin-top: 0.1rem;
+	position: relative;
 }
 .ball .lastBall .line{
-	margin-left: 0.3rem;
-	margin-top: 0.1rem;
+	margin-left: 0.12rem;
+	/*margin-top: 0.1rem;*/
 	overflow: hidden;
 }
 .ball .lastBall .line .tit{
@@ -462,6 +489,8 @@ p{
 	padding-left: 0.08rem;
 }
 .ball .lastBall .line>li{
+	display: inline-block;
+	border-bottom: 1px solid #f7e1e1;
 	height: 0.36rem;
 	margin-top: 0.05rem;
 }
@@ -474,17 +503,20 @@ p{
 	line-height: 0.36rem;
 	vertical-align: top;
 }
+.ball .lastBall .line>li .fir{
+	width: 1.4rem;
+}
 .ball .lastBall .line .one{
 	display: inline-block;
-	width: 3.4rem;
+	/*width: 3.4rem;*/
 	vertical-align: top;
 	height: 0.36rem;
 }
 .ball .lastBall .line .one li{
 	float: left;
-	width: 0.36rem;
-	height: 0.36rem;
-	margin: 0 0.08rem;
+	width: 0.31rem;
+	height: 0.31rem;
+	margin: 0 0.04rem;
 	vertical-align: top;
 }
 .ball .lastBall .line .one li img{
@@ -501,17 +533,20 @@ p{
 /*历史小球-end*/
 /*查询历史按钮-start*/
 #hist{
-	width: 1rem;
-	height: 0.3rem;
+	position: absolute;
+	bottom: .12rem;
+	right: .1rem;
+	width: .7rem;
+	height: 0.22rem;
 	background-color: #d7a101;
-	font-size: 0.14rem;
-	line-height: 0.3rem;
-	color: #333;
+	font-size: 0.12rem;
+	line-height: 0.22rem;
+	color: #fff;
 	text-align: center;
 	cursor: pointer;
 	letter-spacing: .2em;
 	border-radius: 0.04rem;
-	margin: 0.1rem 0 0 0.3rem;
+	/*margin: 0.1rem 0 0 0.3rem;*/
 }
 /*查询历史按钮-end*/
 /*历史记录弹窗-start*/
@@ -575,7 +610,7 @@ p{
 	width: 1rem;
 	height: 0.4rem;
 	font-size: 0.14rem;
-	color: #333;
+	color: #fff;
 	border-radius: 0.08rem;
 	cursor: pointer;
 	line-height: 0.4rem;

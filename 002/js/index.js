@@ -1,7 +1,7 @@
 // index.js
 var sp = true;
 var isFirst = true;
-var animateTime = 3000;		/*改变动画时间的话就改变此参数*/
+var animateTime = 6000;		/*改变动画时间长短的话就改变此参数，10000是10秒*/
 // 判断是否是PC打开的
 function IsPC() {
 	var userAgentInfo = navigator.userAgent;
@@ -40,6 +40,10 @@ resize();
 
 $(function(){
 
+	// 设置球的高度为整数
+	$('.ball .nowBall .l .round .roundBox li').height($('.ball .nowBall .l .round .roundBox li').height());
+	$('.ball .nowBall .l .round .roundBox').height($('.ball .nowBall .l .round .roundBox li').height());
+
 	// 时间两位数处理
 	function timeTwo(n){
 		if (n<10) {
@@ -66,9 +70,54 @@ $(function(){
 	// 滚动动画
 	function animat(n,top,time){
 		var ul = $('.ball .nowBall .l .round .roundBox ul');
-		ul.eq(n).animate({'top':top},time);
+		ul.eq(n).animate({'top':top},time,'easeOutCirc');
 	};
 
+	// 重置位置
+	function resizeL(){
+		var h = $('.ball .nowBall .l .round .roundBox li').height();
+		var mH = -h * 10 * 6;
+		var ul = $('.ball .nowBall .l .round .roundBox ul');
+		var t0 = parseInt(ul.eq(0).css('top')),
+			t1 = parseInt(ul.eq(1).css('top')),
+			t2 = parseInt(ul.eq(2).css('top')),
+			t3 = parseInt(ul.eq(3).css('top')),
+			t4 = parseInt(ul.eq(4).css('top')),
+			t5 = parseInt(ul.eq(5).css('top'));
+		var T0 = t0 + mH,
+			T1 = t1 + mH,
+			T2 = t2 + mH,
+			T3 = t3 + mH,
+			T4 = t4 + mH,
+			T5 = t5 + mH;
+		ul.eq(0).css('top',T0);
+		ul.eq(1).css('top',T1);
+		ul.eq(2).css('top',T2);
+		ul.eq(3).css('top',T3);
+		ul.eq(4).css('top',T4);
+		ul.eq(5).css('top',T5);
+		console.log('-------------------');
+		console.log(t0);
+		console.log(t1);
+		console.log(t2);
+		console.log(t3);
+		console.log(t4);
+		console.log(t5);
+		console.log('-------------------');
+		console.log(T0);
+		console.log(T1);
+		console.log(T2);
+		console.log(T3);
+		console.log(T4);
+		console.log(T5);
+		console.log('-------------------');
+		console.log(mH);
+		console.log('-------------------');
+	};
+
+	var setTimeO = 0;
+
+	/*var ds = true;*/	/*控制滚球*/
 	// 处理动画要的数据,并执行动画
 	function round(codeString,time){	/*codeString：中奖码字符串*/
 		var c = codeString;
@@ -79,20 +128,76 @@ $(function(){
 			n5 = Number(codeString[4]),
 			n6 = Number(codeString[5]);
 
-		var h = $('.ball .nowBall .l .round .roundBox li').height() * (-1);
-		var t0 = h * n1,
-			t1 = h * n2,
-			t2 = h * n3,
-			t3 = h * n4,
-			t4 = h * n5,
-			t5 = h * n6;
+		var h = $('.ball .nowBall .l .round .roundBox li').height();
+		var mH = -h * 10 * 6;
+		var t0,t1,t2,t3,t4,t5;
+		if (isFirst) {
+			t0 = -(h * n1) + mH,
+			t1 = -(h * n2) + mH,
+			t2 = -(h * n3) + mH,
+			t3 = -(h * n4) + mH,
+			t4 = -(h * n5) + mH,
+			t5 = -(h * n6) + mH;
+		}else{
+			t0 = -(h * n1),
+			t1 = -(h * n2),
+			t2 = -(h * n3),
+			t3 = -(h * n4),
+			t4 = -(h * n5),
+			t5 = -(h * n6);
+		};
 
-		animat(0,t0,time);
-		animat(1,t1,time);
-		animat(2,t2,time);
-		animat(3,t3,time);
-		animat(4,t4,time);
-		animat(5,t5,time);
+		// 时间随机数处理
+		var time0 = time,
+			time1 = time,
+			time2 = time,
+			time3 = time,
+			time4 = time,
+			time5 = time;
+
+		// if (!isFirst) {
+		// 	time0 = Math.random() * 2000 + time,
+		// 	time1 = Math.random() * 2000 + time,
+		// 	time2 = Math.random() * 2000 + time,
+		// 	time3 = Math.random() * 2000 + time,
+		// 	time4 = Math.random() * 2000 + time,
+		// 	time5 = Math.random() * 2000 + time;
+		// };
+
+
+		if (isFirst) {
+			animat(0,t0,time0);
+			animat(1,t1,time1);
+			animat(2,t2,time2);
+			animat(3,t3,time3);
+			animat(4,t4,time4);
+			animat(5,t5,time5);
+		}else{
+			time0 = time0;
+			time1 = time2 + 3000;
+			time2 = time1 + 3000;
+			time3 = time2 + 3000;
+			time4 = time3 + 3000;
+			time5 = time4 + 3000;
+
+			setTimeO = time5 + 500;
+
+			animat(0,t0,time0);
+			animat(1,t1,time1);
+			animat(2,t2,time2);
+			animat(3,t3,time3);
+			animat(4,t4,time4);
+			animat(5,t5,time5);
+
+			// setTimeout(function(){animat(1,t1,time1);},st0);
+			// setTimeout(function(){animat(2,t2,time2);},st1);
+			// setTimeout(function(){animat(3,t3,time3);},st2);
+			// setTimeout(function(){animat(4,t4,time4);},st3);
+			// setTimeout(function(){animat(5,t5,time5);},st4);
+		};
+
+
+
 		console.log(h);
 	};
 
@@ -117,9 +222,9 @@ $(function(){
 		}
 	};
 
-
 	// 加载页面请求数据
 	function getData(){
+
 	    $.ajax({
 		    url: "http://demo.wikcms.com/codes.php",
 		    type: "POST",
@@ -131,6 +236,7 @@ $(function(){
 		    	$('.ball .nowBall .l .round .tit p').eq(0).text(da.codeList[0].num);
 
 		        var t = da.surplusTime;	/*倒计时剩余时间*/
+		        t = 25;
 
 		        if (isFirst) {
 		        	round(da.codeList[0].code,0);	/*动画*/
@@ -140,7 +246,8 @@ $(function(){
 			        // 延迟显示历史（动画完成后再显示）
 			        setTimeout(function(){
 				        history(da.codeList);
-			        },animateTime);
+				        resizeL();
+			        },setTimeO);
 		        };
 
 		        // 定时器

@@ -187,7 +187,12 @@ $(function(){
 	};
 
 	// 加载页面请求数据
+	var inter = null;
 	function getData(){
+
+		if (inter) {
+			clearInterval(inter);
+		}
 
 	    $.ajax({
 		    url: "http://demo.wikcms.com/codes.php",
@@ -217,7 +222,8 @@ $(function(){
 		        };
 
 		        // 定时器
-				var inter = setInterval(function(){
+		        sTime(t);
+				inter = setInterval(function(){
 					t--;
 					sTime(t);
 					if (t<=0) {
@@ -231,6 +237,57 @@ $(function(){
 		});
 	};
 	getData();
+
+    // 后台切换回来需要再次获取数据
+    function needGetData(){
+		function getHiddenProp(){
+		    var prefixes = ['webkit','moz','ms','o'];
+		    
+		    // if 'hidden' is natively supported just return it
+		    if ('hidden' in document) return 'hidden';
+		    
+		    // otherwise loop over all the known prefixes until we find one
+		    for (var i = 0; i < prefixes.length; i++){
+		        if ((prefixes[i] + 'Hidden') in document) 
+		            return prefixes[i] + 'Hidden';
+		    }
+		 
+		    // otherwise it's not supported
+		    return null;
+		};
+
+		function getVisibilityState() {
+		    var prefixes = ['webkit', 'moz', 'ms', 'o'];
+		    if ('visibilityState' in document) return 'visibilityState';
+		    for (var i = 0; i < prefixes.length; i++) {
+		        if ((prefixes[i] + 'VisibilityState') in document)
+		            return prefixes[i] + 'VisibilityState';
+		    }
+		    // otherwise it's not supported
+		    return null;
+		};
+
+		function isHidden() {
+		    var prop = getHiddenProp();
+		    if (!prop) return false;
+		    
+		    return document[prop];
+		};
+
+		var visProp = getHiddenProp();
+		if (visProp) {
+		    var evtname = visProp.replace(/[H|h]idden/, '') + 'visibilitychange';
+		    document.addEventListener(evtname, function () {
+		        // document.title = document[getVisibilityState()]+"状态";
+		        if (document[getVisibilityState()] == 'visible') {
+		        	isFirst = true;
+		        	getData();
+		        }
+		    },false);
+		};
+    	
+    };
+    needGetData();
 
 	// 日期选择框
 	if (sp) {

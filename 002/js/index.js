@@ -1,7 +1,7 @@
 // index.js
 var sp = true;
 var isFirst = true;
-var animateTime = 6000;		/*改变动画时间长短的话就改变此参数，10000是10秒*/
+var animateTime = 7000;		/*改变动画时间长短的话就改变此参数，10000是10秒*/
 // 判断是否是PC打开的
 function IsPC() {
 	var userAgentInfo = navigator.userAgent;
@@ -56,6 +56,9 @@ $(function(){
 
 	// 页面倒计时显示
 	function sTime(s){
+		if (s<0) {
+			s = 0
+		};
 		var h = parseInt(s/3600),
 			m = parseInt(s%3600/60),
 			s = parseInt(s%3600%60);
@@ -91,6 +94,17 @@ $(function(){
 			T3 = t3 + mH,
 			T4 = t4 + mH,
 			T5 = t5 + mH;
+
+		// 检查问题
+		console.log('----------------------复位' + new Date());
+		console.log(T0);
+		console.log(T1);
+		console.log(T2);
+		console.log(T3);
+		console.log(T4);
+		console.log(T5);
+		console.log('----------------------');
+		
 		ul.eq(0).css('top',T0);
 		ul.eq(1).css('top',T1);
 		ul.eq(2).css('top',T2);
@@ -130,6 +144,16 @@ $(function(){
 			t4 = -(h * (9-n5)),
 			t5 = -(h * (9-n6));
 		};
+
+		// 检查问题
+		console.log('=========================动画' + new Date());
+		console.log(t0);
+		console.log(t1);
+		console.log(t2);
+		console.log(t3);
+		console.log(t4);
+		console.log(t5);
+		console.log('=========================');
 
 		// 时间随机数处理
 		var time0 = time,
@@ -189,13 +213,14 @@ $(function(){
 	// 加载页面请求数据
 	var inter = null;
 	function getData(){
-
+		console.log('获取数据');
 		if (inter) {
 			clearInterval(inter);
 		}
 
 	    $.ajax({
-		    url: "http://demo.wikcms.com/codes.php",
+		    // url: "http://demo.wikcms.com/codes.php",
+		    url: "http://kkiwi.200.1mdns.com/codes.php",
 		    type: "POST",
 		    success: function(data){
 		    	var da = JSON.parse(data);
@@ -217,18 +242,19 @@ $(function(){
 			        setTimeout(function(){
 			        	$('.ball .nowBall .l .h2 div').hide();
 				        history(da.codeList);
+				        console.log('我靠啊');
 				        resizeL();
 			        },setTimeO);
 		        };
 
 		        // 定时器
+				isFirst = false;
 		        sTime(t);
 				inter = setInterval(function(){
 					t--;
 					sTime(t);
-					if (t<=0) {
-						isFirst = false;
-						clearInterval(inter);
+					if (t<=-1) {
+						// clearInterval(inter);
 						getData();
 					};
 				},1000);
@@ -280,6 +306,7 @@ $(function(){
 		    document.addEventListener(evtname, function () {
 		        // document.title = document[getVisibilityState()]+"状态";
 		        if (document[getVisibilityState()] == 'visible') {
+		        	console.log('此方法运行了');
 		        	isFirst = true;
 		        	getData();
 		        }
@@ -324,7 +351,8 @@ $(function(){
     	};
 
     	$.ajax({
-    		url: 'http://demo.wikcms.com/codelist.php?date=' + time,
+    		// url: 'http://demo.wikcms.com/codelist.php?date=' + time,
+    		url: "http://kkiwi.200.1mdns.com/codes.php" + time,
     		success: function(data){
     			var d = JSON.parse(data);
     			var list = d.codeList;

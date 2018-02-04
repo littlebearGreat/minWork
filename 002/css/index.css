@@ -263,7 +263,7 @@ p{
 #scroller li{
 	width: .8rem;
 	height: .5rem;
-	margin: .14rem auto;
+	margin: .14rem .15rem;
 }
 .bannerRight li img{
 	width: 100%;
@@ -285,7 +285,7 @@ p{
 }
 .midNav .topRight-nav li{
 	float: left;
-	width: 124px;
+	width: 1.24rem;
 	height: 0.14rem;
 	line-height: 0.14rem;
 	margin-top: 0.07rem;

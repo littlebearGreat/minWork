@@ -94,16 +94,6 @@ $(function(){
 			T3 = t3 + mH,
 			T4 = t4 + mH,
 			T5 = t5 + mH;
-
-		// 检查问题
-		console.log('----------------------复位' + new Date());
-		console.log(T0);
-		console.log(T1);
-		console.log(T2);
-		console.log(T3);
-		console.log(T4);
-		console.log(T5);
-		console.log('----------------------');
 		
 		ul.eq(0).css('top',T0);
 		ul.eq(1).css('top',T1);
@@ -144,16 +134,6 @@ $(function(){
 			t4 = -(h * (9-n5)),
 			t5 = -(h * (9-n6));
 		};
-
-		// 检查问题
-		console.log('=========================动画' + new Date());
-		console.log(t0);
-		console.log(t1);
-		console.log(t2);
-		console.log(t3);
-		console.log(t4);
-		console.log(t5);
-		console.log('=========================');
 
 		// 时间随机数处理
 		var time0 = time,
@@ -212,39 +192,43 @@ $(function(){
 
 	// 加载页面请求数据
 	var inter = null;
+	var t = 0;
+	var lastCode = null;
+	var nowCode = null;
 	function getData(){
-		console.log('获取数据');
 		if (inter) {
 			clearInterval(inter);
 		}
 
 	    $.ajax({
-		    // url: "http://demo.wikcms.com/codes.php",
 		    url: "http://kkiwi.200.1mdns.com/codes.php",
 		    type: "POST",
 		    success: function(data){
 		    	var da = JSON.parse(data);
-		    	console.log(da);
+		    	nowCode = da.codeList[0].num;
 
 		    	// 显示最近一次的期数
 		    	$('.ball .nowBall .l .round .tit p').eq(0).text(da.codeList[0].num);
 		    	$('.ball .nowBall .l .h2 div .b1').eq(0).text(da.codeList[0].num);
 
-		        var t = da.surplusTime;	/*倒计时剩余时间*/
+		        t = da.surplusTime;	/*倒计时剩余时间*/
 
 		        if (isFirst) {
 		        	round(da.codeList[0].code,0);	/*动画*/
 					history(da.codeList);
+					lastCode = da.codeList[0].num;
 		        }else{
-		        	$('.ball .nowBall .l .h2 div').show();
-			        round(da.codeList[0].code,animateTime);	/*动画*/
-			        // 延迟显示历史（动画完成后再显示）
-			        setTimeout(function(){
-			        	$('.ball .nowBall .l .h2 div').hide();
-				        history(da.codeList);
-				        console.log('我靠啊');
-				        resizeL();
-			        },setTimeO);
+		        	if (nowCode != lastCode) {
+		        		lastCode = nowCode;
+			        	$('.ball .nowBall .l .h2 div').show();
+				        round(da.codeList[0].code,animateTime);	/*动画*/
+				        // 延迟显示历史（动画完成后再显示）
+				        setTimeout(function(){
+				        	$('.ball .nowBall .l .h2 div').hide();
+					        history(da.codeList);
+					        resizeL();
+				        },setTimeO);
+		        	}
 		        };
 
 		        // 定时器
@@ -253,8 +237,7 @@ $(function(){
 				inter = setInterval(function(){
 					t--;
 					sTime(t);
-					if (t<=-1) {
-						// clearInterval(inter);
+					if (t<=0) {
 						getData();
 					};
 				},1000);
@@ -304,9 +287,7 @@ $(function(){
 		if (visProp) {
 		    var evtname = visProp.replace(/[H|h]idden/, '') + 'visibilitychange';
 		    document.addEventListener(evtname, function () {
-		        // document.title = document[getVisibilityState()]+"状态";
 		        if (document[getVisibilityState()] == 'visible') {
-		        	console.log('此方法运行了');
 		        	isFirst = true;
 		        	getData();
 		        }
@@ -351,7 +332,6 @@ $(function(){
     	};
 
     	$.ajax({
-    		// url: 'http://demo.wikcms.com/codelist.php?date=' + time,
     		url: "http://kkiwi.200.1mdns.com/codes.php" + time,
     		success: function(data){
     			var d = JSON.parse(data);
@@ -375,7 +355,7 @@ $(function(){
     })
 
     // banner轮播图
-	$("#scroller").simplyScroll({orientation:'vertical',customClass:'vert'});
+	// $("#scroller").simplyScroll({orientation:'vertical',customClass:'vert'});
 
 
 })

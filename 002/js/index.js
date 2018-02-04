@@ -1,4 +1,24 @@
 // index.js
+(function ($) {
+    $.mobiscroll.i18n.zh = $.extend($.mobiscroll.i18n.zh, {
+        dateFormat: 'yyyy-mm-dd',
+        dateOrder: 'yymmdd',
+        dayNames: ['周日', '周一;', '周二;', '周三', '周四', '周五', '周六'],
+		dayNamesShort: ['日', '一', '二', '三', '四', '五', '六'],
+        dayText: '日',
+        hourText: '时',
+        minuteText: '分',
+        monthNames: ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月'],
+        monthNamesShort: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'],
+        monthText: '月',
+        secText: '秒',
+        timeFormat: 'HH:ii',
+        timeWheels: 'HHii',
+        yearText: '年',
+        height:80,
+        fontSize:'36px'
+    });
+})(jQuery);
 var sp = true;
 var isFirst = true;
 var animateTime = 7000;		/*改变动画时间长短的话就改变此参数，10000是10秒*/
@@ -24,9 +44,9 @@ function resize() {
     a = function () {
     	var a;
     	if (IsPC()) {
-	        a = 766;
+	        a = 800;
     	}else{
-	        a = b.getBoundingClientRect().width - 80;
+	        a = b.getBoundingClientRect().width - 20;
     	};
         b.style.fontSize = (a/764) * 100 + "px"
     }, c = null;
@@ -62,10 +82,15 @@ $(function(){
 		var h = parseInt(s/3600),
 			m = parseInt(s%3600/60),
 			s = parseInt(s%3600%60);
-		h = timeTwo(h);
-		m = timeTwo(m);
-		s = timeTwo(s);
-		var text = h + ':' + m + ':' + s;
+		var uh = timeTwo(h),
+			um = timeTwo(m),
+			us = timeTwo(s);
+		var text;
+		if (h==0) {
+			text = um + ':' + us;
+		}else{
+			text = uh + ':' + um + ':' + us;
+		}
 
 		// 改变页面显示
 		$('.ball .nowBall .l .h2 .b2').text(text);
@@ -190,6 +215,26 @@ $(function(){
 		}
 	};
 
+	// 设置当前信息
+	function setNowInfo01(data){
+		var tb = $('.ball .nowBall .l table tr').eq(1).children();
+		tb.eq(0).text(data.codeList[0].num);
+		tb.eq(1).text(data.codeList[0].time);
+		tb.eq(2).text(data.jj0);
+	};
+	function setNowInfo02(data){
+		var tb = $('.ball .nowBall .r table tr');
+		tb.eq(1).children().eq(1).text(data.jj1);
+		tb.eq(1).children().eq(2).text(data.zs1);
+
+		tb.eq(2).children().eq(1).text(data.jj2);
+		tb.eq(2).children().eq(2).text(data.zs2);
+
+		tb.eq(3).children().eq(1).text(data.jj3);
+		tb.eq(3).children().eq(2).text(data.zs3);
+	};
+
+
 	// 加载页面请求数据
 	var inter = null;
 	var t = 0;
@@ -205,6 +250,7 @@ $(function(){
 		    type: "POST",
 		    success: function(data){
 		    	var da = JSON.parse(data);
+		    	console.log(da);
 		    	nowCode = da.codeList[0].num;
 
 		    	// 显示最近一次的期数
@@ -212,8 +258,10 @@ $(function(){
 		    	$('.ball .nowBall .l .h2 div .b1').eq(0).text(da.codeList[0].num);
 
 		        t = da.surplusTime;	/*倒计时剩余时间*/
+        		setNowInfo01(da);
 
 		        if (isFirst) {
+		        	setNowInfo02(da);
 		        	round(da.codeList[0].code,0);	/*动画*/
 					history(da.codeList);
 					lastCode = da.codeList[0].num;
@@ -224,10 +272,13 @@ $(function(){
 				        round(da.codeList[0].code,animateTime);	/*动画*/
 				        // 延迟显示历史（动画完成后再显示）
 				        setTimeout(function(){
+				        	setNowInfo02(da);
 				        	$('.ball .nowBall .l .h2 div').hide();
 					        history(da.codeList);
 					        resizeL();
 				        },setTimeO);
+		        	}else{
+			        	t = 0;
 		        	}
 		        };
 
@@ -307,6 +358,7 @@ $(function(){
 	        theme: 'android-ics light',
 	        lang: 'zh',
 	        display: 'bottom',
+	        fontSize: 36
 	    });
 	};
 

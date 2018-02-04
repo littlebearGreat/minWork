@@ -239,7 +239,7 @@ p{
 	position: relative;
 	overflow: hidden;
 }
-.bannerRight>img{
+.bannerRight .swiperBox img{
 	width: 100%;
 	height: 100%;
 }
@@ -248,17 +248,18 @@ p{
 	top: 0;
 	right: 0;
 	width: 1.1rem;
+	z-index: 9;
 }
 .bannerRight .simply-scroll-container .simply-scroll-clip{
 	width: 1.1rem;
 	height: 1.8rem;
 }
 .bannerRight ul{
-	position: absolute;
 	right: 0;
 	top: 0;
 	width: 1.1rem;
 	font-size: 0;
+	background-color: #bf1e2d;
 }
 #scroller li{
 	width: .8rem;
@@ -356,7 +357,7 @@ p{
 	border-bottom: 3px solid #efefef;
 }
 .ball .nowBall{
-	height: 1.74rem;
+	height: 1.84rem;
 	border-bottom: 3px solid #cd2c2c;
 }
 .ball .nowBall .h1,
@@ -375,7 +376,7 @@ p{
 .ball .nowBall .l{
 	display: inline-block;
 	width: 4.44rem;
-	height: 1.46rem;
+	height: 1.56rem;
 }
 .ball .nowBall .l table,
 .ball .nowBall .r table{
@@ -391,11 +392,18 @@ p{
 	color: #333;
 }
 .ball .nowBall .l .h2{
-	font-size: 0.14rem;
+	font-size: 0.18rem;
 	color: #333;
 	text-align: center;
 	line-height: 0.38rem;
 	position: relative;
+}
+.ball .nowBall .l .h2 .b2{
+	font-size: .24rem;
+	vertical-align: middle;
+	line-height: .38rem;
+	display: inline-block;
+	height: .38rem;
 }
 .ball .nowBall .l .h2 div{
 	position: absolute;
@@ -410,7 +418,7 @@ p{
 	display: none;
 }
 .ball .nowBall .l .round{
-	height: 0.38rem;
+	height: 0.46rem;
 	overflow: hidden;
 	font-size: 0;
 }
@@ -422,7 +430,7 @@ p{
 }
 .ball .nowBall .l .round .tit p{
 	font-size: 0.12rem;
-	line-height: 0.19rem;
+	line-height: 0.23rem;
 	text-align: center;
 	color: #333;
 }
@@ -430,15 +438,15 @@ p{
 	display: inline-block;
 	width: 3.6rem;
 	vertical-align: top;
-	height: 0.38rem;
+	height: 0.46rem;
 	overflow: hidden;
 }
 .ball .nowBall .l .round .roundBox>div{
 	font-size: 0;
 	float: left;
-	width: 0.38rem;
-	height: 3.8rem;
-	margin: 0 0.08rem;
+	width: 0.46rem;
+	height: 5.2rem;
+	margin: 0 0.04rem;
 	position: relative;
 	vertical-align: top;
 }
@@ -446,8 +454,8 @@ p{
 	width: 0.2rem;
 	font-size: 0.24rem;
 	color: #333;
-	line-height: 0.38rem;
-	height: 0.38rem;
+	line-height: 0.46rem;
+	height: 0.46rem;
 }
 .ball .nowBall .l .round .roundBox ul{
 	position: absolute;
@@ -455,8 +463,8 @@ p{
 	top: 0;
 }
 .ball .nowBall .l .round .roundBox li{
-	width: 0.38rem;
-	height: 0.42rem;
+	width: 0.46rem;
+	height: 0.52rem;
 }
 .ball .nowBall .l .round .roundBox li img{
 	width: 100%;
@@ -471,7 +479,7 @@ p{
 /*当前小球-end*/
 /*历史小球-end*/
 .ball .lastBall{
-	height: 4.4rem; 
+	height: 4.8rem; 
 	margin-top: 0.1rem;
 	position: relative;
 }
@@ -491,7 +499,7 @@ p{
 .ball .lastBall .line>li{
 	display: inline-block;
 	border-bottom: 1px solid #f7e1e1;
-	height: 0.36rem;
+	height: 0.4rem;
 	margin-top: 0.05rem;
 }
 .ball .lastBall .line>li>span{
@@ -510,12 +518,12 @@ p{
 	display: inline-block;
 	/*width: 3.4rem;*/
 	vertical-align: top;
-	height: 0.36rem;
+	height: 0.4rem;
 }
 .ball .lastBall .line .one li{
 	float: left;
-	width: 0.31rem;
-	height: 0.31rem;
+	width: 0.38rem;
+	height: 0.38rem;
 	margin: 0 0.04rem;
 	vertical-align: top;
 }
@@ -744,3 +752,63 @@ p{
 }
 /*底部导航-end*/
 /*banner*/
+.swiper-container{
+	width: 5.3rem;
+	height: 1.79rem;
+}
+
+.mbsc-mobiscroll .dwwr {  
+  background-color: transparent;  
+}  
+.dwsc .dw-sel {  
+  background: url(../img/date.png) no-repeat left center;  
+  width: 40px;  
+  height: 40px;  
+  background-size: 50% 50%;  
+  padding-left: 20px;  
+}  
+.dwsc:last-child .dw-sel {  
+  background-image: url(../img/time.png);  
+}  
+.dw-bf {  
+  position: relative;  
+}  
+.mbsc-w-p {  
+  width: 150px;  
+}  
+.dw-i {  
+  width: 80px;  
+  font-size: 0.3rem;  
+}  
+.dw-li {  
+  padding-left: 20px;  
+}  
+.mbsc-mobiscroll .dwwol {  
+  border-color: #b7ebfe;  
+  width: 80px;  
+  margin-left: 23px;  
+}  
+.dw-sel .dw-i,  
+.mbsc-mobiscroll .dwl {  
+  font-size: 0.3rem;  
+}  
+.mbsc-mobiscroll .dwl {  
+  font-size: 0.22rem;  
+  width: 1.6rem;  
+  margin-left: 0.4rem;  
+}  
+.android-ics .dw .dwwol{
+    width: 88% !important;
+    left: 8% !important;
+    height: 46px !important;
+    margin-top: -24px !important;
+    display: block;
+}
+.android-ics .dw .dwb{
+	font-size: 50px !important;
+	line-height: 80px !important;
+	height: 80px !important;
+}
+.android-ics.light .dwbc{
+	height: 80px;
+}

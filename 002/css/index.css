@@ -349,7 +349,7 @@ p{
 .ball .nowBall,
 .ball .lastBall{
 	font-size: 0;
-	width: 100%;
+	/* width: 100%; */
 	border: 1px solid #cd2c2c;
 }
 .ball .lastBall{

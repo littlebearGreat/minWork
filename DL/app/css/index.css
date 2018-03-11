@@ -1,0 +1,82 @@
+/*index.css 首页样式表*/
+header{
+	text-align: center;
+	line-height: .88rem;
+	font-size: .36rem;
+}
+section{
+	padding-bottom: .2rem;
+}
+/*统计数字-start*/
+.statistics{
+	padding: .3rem 0 .19rem .8rem;
+}
+.statistics>div{
+	display: inline-block;
+	vertical-align: top;
+}
+.statistics .online{
+	width: 2.93rem;
+	margin-top: .83rem;
+}
+.statistics .online .text{
+	font-size: .75rem;
+	line-height: .91rem;
+	color: #0377fa;
+}
+.statistics .total{
+	width: 3.4rem;
+}
+.statistics .total .text{
+	font-size: 1.8rem;
+	line-height: 1.96rem;
+	color: #0377fa;
+}
+.statistics .flow{
+	width: 2.93rem;
+	margin-top: .22rem;
+}
+.statistics .warn{
+	width: 2.8rem;
+	margin-top: .22rem;
+	border-left: 1px solid #999;
+	padding-left: .6rem;
+}
+.statistics .tit{
+	font-size: .28rem;
+	line-height: .46rem;
+	color: #999;
+}
+.statistics .flow .text,
+.statistics .warn .text{
+	font-size: .6rem;
+	line-height: .76rem;
+	color: #0377fa;
+}
+/*统计数字-end*/
+/*灰色间隔-start*/
+.space{
+	height: .2rem;
+	background-color: #f0f0f0;
+}
+/*灰色间隔-end*/
+/*三个并列统计图-start*/
+.pie{
+	padding: .4rem .2rem;
+	display: flex;
+	justify-content: space-between;
+}
+.pie>div{
+	width: 2.06rem;
+	height: 2.06rem;
+	background-color: #e5e5e5;
+}
+/*三个并列统计图-end*/
+/*统计图-start*/
+.chart{
+	padding: 0 .2rem;
+	height: 2.6rem;
+	margin-bottom: .2rem;
+	background-color: #e5e5e5;
+}
+/*统计图-end*/

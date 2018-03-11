@@ -1,0 +1,48 @@
+/*common.css 公共样式表*/
+/*样式重置*/
+body{
+	font-size: 0;
+	/*font-family: 'Microsoft YaHei',SimHei,Arial,SimSun;*/
+}
+body,ul,li,p{
+	margin: 0;
+	padding: 0;
+}
+ul{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+/*清除浮动引起的高度塌陷*/
+.clearfix::before,  
+.clearfix::after{  
+        display:table;  
+        content:"";  
+}  
+.clearfix::after{  
+    clear:both;  
+} 
+/*页面样式*/
+header{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: .88rem;
+	background-color: #0377fa;
+	color: #fff;
+}
+footer{
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: .98rem;
+	border-top: 1px solid #ddd;
+	background-color: #fff;
+}
+section{
+	margin-top: .88rem;
+	margin-bottom: .99rem;
+}

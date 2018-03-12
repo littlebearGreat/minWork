@@ -1,0 +1,50 @@
+/*me.css 我的*/
+header{
+	text-align: center;
+	line-height: .88rem;
+	font-size: .36rem;
+}
+.userIcon{
+	padding: .3rem .2rem 0;
+	height: 2rem;
+	background-color: #fff;
+}
+ul{
+	margin-top: .2rem;
+}
+li{
+	border-bottom: 1px solid #ddd;
+	background-color: #fff;
+}
+li a{
+	display: block;
+	padding: .34rem .2rem;
+}
+li .icon{
+	float: left;
+	height: .32rem;
+	width: .28rem;
+	vertical-align: top;
+	margin-right: .2rem;
+}
+li .icon img{
+	width: 100%;
+	height: 100%;
+}
+li .more{
+	float: right;
+	height: .22rem;
+	width: .12rem;
+	margin-top: .05rem;
+	background: url(../img/right.png) no-repeat;
+	background-size: 100% 100%;
+}
+li p{
+	font-size: .28rem;
+	line-height: .32rem;
+	color: #333;
+}
+.bottomSpace{
+	border: none;
+	margin-bottom: .2rem;
+}

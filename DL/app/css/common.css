@@ -23,7 +23,16 @@ a{
 .clearfix::after{  
     clear:both;  
 } 
+/*省略号*/
+.ellipsis{
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
 /*页面样式*/
+body{
+	background-color: #f0f0f0;
+}
 header{
 	position: fixed;
 	top: 0;
@@ -45,4 +54,65 @@ footer{
 section{
 	margin-top: .88rem;
 	margin-bottom: .99rem;
+	padding-bottom: .2rem;
+}
+footer{
+	display: flex;
+	justify-content: space-around;
+}
+footer div{
+	height: .76rem;
+	cursor: pointer;
+	margin-top: .16rem;
+}
+footer a{
+	display: block;
+	padding: .34rem .1rem 0;
+	height: 100%;
+}
+footer p{
+	font-size: .22rem;
+	color: #666;
+	line-height: .42rem;
+	text-align: center;
+}
+footer .home{
+	background: url(../img/home.png) no-repeat;
+	background-size: .34rem .35rem;
+	background-position: center 0;
+}
+footer .equip{
+	background: url(../img/equip.png) no-repeat;
+	background-size: .49rem .35rem;
+	background-position: center 0;
+}
+footer .warn{
+	background: url(../img/warn.png) no-repeat;
+	background-size: .39rem .35rem;
+	background-position: center 0;
+}
+footer .me{
+	background: url(../img/me.png) no-repeat;
+	background-size: .34rem .35rem;
+	background-position: center 0;
+}
+footer .homeA{
+	background: url(../img/homeA.png) no-repeat;
+	background-size: .34rem .35rem;
+	background-position: center 0;
+}
+footer .equipA{
+	background: url(../img/equipA.png) no-repeat;
+	background-size: .49rem .35rem;
+	background-position: center 0;
+}
+footer .warnA{
+	background: url(../img/warnA.png) no-repeat;
+	background-size: .39rem .35rem;
+	background-position: center 0;
+}
+footer .meA{
+	background: url(../img/meA.png) no-repeat;
+	background-size: .34rem .35rem;
+	background-position: center 0;
 }

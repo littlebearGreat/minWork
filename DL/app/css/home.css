@@ -4,12 +4,10 @@ header{
 	line-height: .88rem;
 	font-size: .36rem;
 }
-section{
-	padding-bottom: .2rem;
-}
 /*统计数字-start*/
 .statistics{
 	padding: .3rem 0 .19rem .8rem;
+	background-color: #fff;
 }
 .statistics>div{
 	display: inline-block;
@@ -54,17 +52,13 @@ section{
 	color: #0377fa;
 }
 /*统计数字-end*/
-/*灰色间隔-start*/
-.space{
-	height: .2rem;
-	background-color: #f0f0f0;
-}
-/*灰色间隔-end*/
 /*三个并列统计图-start*/
 .pie{
+	margin-top: .2rem;
 	padding: .4rem .2rem;
 	display: flex;
 	justify-content: space-between;
+	background-color: #fff;
 }
 .pie>div{
 	width: 2.06rem;

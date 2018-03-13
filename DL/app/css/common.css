@@ -42,6 +42,27 @@ header{
 	background-color: #0377fa;
 	color: #fff;
 }
+/* 带返回按钮的顶部样式-start */
+header .back{
+    float: left;
+    width: .76rem;
+    height: .88rem;
+    padding-left: .34rem;
+    margin-left: .2rem;
+    margin-right: -1.3rem;
+    font-size: .36rem;
+    line-height: .88rem;
+    background: url(../img/back.png) no-repeat;
+    background-position: 0 .28rem;
+    background-size: .18rem .32rem;
+    cursor: pointer;
+}
+header p{
+	text-align: center;
+	line-height: .88rem;
+	font-size: .36rem;
+}
+/* 带返回按钮的顶部样式-end */
 footer{
 	position: fixed;
 	left: 0;
@@ -115,4 +136,28 @@ footer .meA{
 	background: url(../img/meA.png) no-repeat;
 	background-size: .34rem .35rem;
 	background-position: center 0;
+}
+/* 灰色大按钮 */
+.grayBtnBig{
+	margin: .6rem .2rem 0;
+    height: .6rem;
+    font-size: .28rem;
+    text-align: center;
+    line-height: .6rem;
+    color: #666;
+    background-color: #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+}
+/* 高亮大按钮 */
+.colorBtnBig{
+	margin: .6rem .2rem 0;
+    height: .6rem;
+    font-size: .28rem;
+    text-align: center;
+    line-height: .6rem;
+    color: #fff;
+    background-color: #0377fa;
+    border-radius: 4px;
+    cursor: pointer;
 }

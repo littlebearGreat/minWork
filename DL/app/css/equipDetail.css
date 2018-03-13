@@ -1,30 +1,18 @@
-/*me.css 我的*/
+/* equipDetail.css  设备详情 */
 header{
 	text-align: center;
 	line-height: .88rem;
 	font-size: .36rem;
 }
-.userIcon{
-	padding: .3rem .2rem 0;
-	height: 2rem;
-	background-color: #fff;
+.equipPic{
+    height: 3rem;
+    background-color: #fff;
+    padding: .2rem;
+    margin-bottom: .2rem;
 }
-.userIcon div{
-	width: 1.3rem;
-	height: 1.3rem;
-	border-radius: 50%;
-	margin: 0 auto;
-	overflow: hidden;
-}
-.userIcon div img{
-	width: 100%;
-	height: 100%;
-}
-.userIcon p{
-	font-size: .24rem;
-	line-height: .7rem;
-	text-align: center;
-	color: #666;
+.equipPic img{
+    width: 100%;
+    height: 100%;
 }
 ul{
 	margin-top: .2rem;
@@ -60,8 +48,4 @@ li p{
 	font-size: .28rem;
 	line-height: .5rem;
 	color: #333;
-}
-.bottomSpace{
-	border: none;
-	margin-bottom: .2rem;
 }

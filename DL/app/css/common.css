@@ -56,6 +56,7 @@ header .back{
     background-position: 0 .28rem;
     background-size: .18rem .32rem;
     cursor: pointer;
+    color: #fff;
 }
 header p{
 	text-align: center;
@@ -75,7 +76,7 @@ footer{
 section{
 	margin-top: .88rem;
 	margin-bottom: .99rem;
-	padding-bottom: .2rem;
+	/*padding-bottom: .2rem;*/
 }
 footer{
 	display: flex;

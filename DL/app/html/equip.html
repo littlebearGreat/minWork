@@ -8,11 +8,89 @@
 	<link rel="stylesheet" type="text/css" href="../css/equip.css">
 	<script type="text/javascript" src="../js/jquery.min.js"></script>
 	<script type="text/javascript" src="../js/common.js"></script>
+	<script type="text/javascript" src="../js/equip.js"></script>
 	<title>设备列表</title>
 </head>
 <body class="clearfix">
-	<header>设备列表</header>
+	<header>
+		<span class="search"></span>
+		<span class="scan"></span>
+		<p>设备列表</p>
+	</header>
 	<section>
+		<div class="box">
+			<!-- 搜索框 -->
+			<div class="search">
+				<input type="text" placeholder="请输入搜索信息">
+				<span class="icon"></span>
+			</div>
+			<!-- 筛选栏 -->
+			<div class="filter">
+				<span class="sideIcon"></span>
+				<div>
+					<span class="active">在线/离线</span>
+					<span>流量值 ↑</span>
+					<span>创建时间 ↑</span>
+				</div>
+			</div>
+		</div>
+		<!-- 设备列表 -->
+		<ul class="clearfix list">
+			<li>
+				<span class="pic">
+					<img src="../img/homeA.png" alt="">
+				</span>
+				<span class="btn">监控</span>
+				<div class="info">
+					<p class="tit ellipsis">机器198706</p>
+					<p class="t ellipsis">XXX设备组</p>
+					<p class="t ellipsis">某大型红薯厂</p>
+					<div class="state clearfix">
+						<span class="warnIcon">报警</span>
+						<span class="warnIcon">报警</span>
+					</div>
+				</div>
+			</li>
+			<li>
+				<span class="pic">
+					<img src="../img/homeA.png" alt="">
+				</span>
+				<span class="btn">监控</span>
+				<div class="info">
+					<p class="tit ellipsis">机器198706</p>
+					<p class="t ellipsis">XXX设备组</p>
+					<p class="t ellipsis">某大型红薯厂</p>
+					<div class="state clearfix">
+						<span class="warnIcon">报警</span>
+						<span class="warnIcon">报警</span>
+					</div>
+				</div>
+			</li>
+			<li>
+				<span class="pic">
+					<img src="../img/homeA.png" alt="">
+				</span>
+				<span class="btn">监控</span>
+				<div class="info">
+					<p class="tit ellipsis">机器198706</p>
+					<p class="t ellipsis">XXX设备组</p>
+					<p class="t ellipsis">某大型红薯厂</p>
+					<div class="state clearfix">
+						<span class="warnIcon">报警</span>
+						<span class="warnIcon">报警</span>
+					</div>
+				</div>
+			</li>
+		</ul>
+		<!-- 侧边栏遮罩 -->
+		<div class="slideBack"></div>
+		<!-- 侧边栏 -->
+		<div class="slide">
+			<div class="btn">
+				<span class="sure">确定</span>
+				<span class="cancel">取消</span>
+			</div>
+		</div>
 	</section>
 	<footer>
 		<div class="home">

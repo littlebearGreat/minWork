@@ -138,6 +138,12 @@ footer .meA{
 	background-size: .34rem .35rem;
 	background-position: center 0;
 }
+footer .homeA p,
+footer .equipA p,
+footer .warnA p,
+footer .meA p{
+	color: #0377fa;
+}
 /* 灰色大按钮 */
 .grayBtnBig{
 	margin: .6rem .2rem 0;

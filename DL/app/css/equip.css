@@ -1,1 +1,224 @@
 /*equip.css 设备列表*/
+html,body{
+	height: 100%;
+}
+header .search{
+	float: left;
+	background: url(../img/search1.png) no-repeat;
+	background-size: .27rem .33rem;
+	background-position: left center;
+	margin-left: .2rem;
+	margin-right: -0.7rem;
+}
+header .scan{
+	float: right;
+	background: url(../img/scan.png) no-repeat;
+	background-size: .33rem .33rem;
+	background-position: right center;
+	margin-right: .2rem;
+	margin-left: -0.7rem;
+}
+header .search,
+header .scan{
+	vertical-align: top;
+	height: .88rem;
+	width: .5rem;
+	cursor: pointer;
+}
+header p{
+	text-align: center;
+	line-height: .88rem;
+	font-size: .36rem;
+}
+section{
+	overflow: hidden;
+}
+/*搜索框*/
+section .box{
+	position: fixed;
+	left: 0;
+	top: .88rem;
+	width: 100%;
+	background-color: #f0f0f0;
+}
+section .search{
+	padding: .2rem;
+	background-color: #fff;
+	display: none;
+	margin-bottom: .2rem;
+}
+section .search input{
+	height: .6rem;
+	width: 6.24rem;
+	color: #666;
+	border-radius: 4px;
+	border: 1px solid #ccc;
+	outline: none;
+	padding: 0 .1rem;
+	line-height: .6rem;
+}
+section .search .icon{
+	float: right;
+	vertical-align: top;
+	width: .56rem;
+	height: .6rem;
+	background: url(../img/search2.png) no-repeat;
+	background-size: .3rem .35rem;
+	background-position: right center;
+	cursor: pointer;
+}
+/*筛选栏*/
+section .filter{
+	padding: 0 .2rem;
+	background-color: #fff;
+}
+section .filter .sideIcon{
+	float: right;
+	width: .5rem;
+	height: .96rem;
+	background: url(../img/sideMenu.png) no-repeat;
+	background-size: .32rem .22rem;
+	background-position: right center;
+	vertical-align: top;
+	cursor: pointer;
+}
+section .filter div{
+	width: 6.45rem;
+	display: flex;
+	justify-content: space-between;
+}
+section .filter div span{
+	height: .96rem;
+	font-size: .3rem;
+	line-height: .96rem;
+	border-bottom: 4px solid #fff;
+	padding: 0 .3rem;
+	cursor: pointer;
+}
+section .filter .active{
+	color: #0377fa;
+	border-color: #0377fa;
+}
+/*设备列表*/
+.list{
+	overflow: auto;
+	margin-top: 1rem;
+}
+.searchShow{
+	margin-top: 2.2rem;
+}
+.list li{
+	padding: .26rem .2rem;
+	margin-top: .2rem;
+	background-color: #fff;
+}
+.list .pic{
+	float: left;
+	width: 1.28rem;
+	height: 1.28rem;
+	border-radius: 50%;
+	overflow: hidden;
+	vertical-align: top;
+	margin-top: .14rem;
+}
+.list .pic img{
+	width: 100%;
+	height: 100%;
+}
+.list .btn{
+	float: right;
+	width: 1rem;
+	height: .5rem;
+	background-color: #0377fa;
+	color: #fff;
+	line-height: .5rem;
+	text-align: center;
+	font-size: .24rem;
+	border-radius: 4px;
+	margin-top: .96rem;
+	vertical-align: top;
+	cursor: pointer;
+}
+.list .info{
+	vertical-align: top;
+	width: 4.3rem;
+	margin-left: 1.56rem;
+}
+.list .tit{
+	font-size: .28rem;
+	line-height: .44rem;
+	color: #666;
+}
+.list .t{
+	font-size: .24rem;
+	color: #727272;
+	line-height: .38rem;
+}
+.list .state{
+	min-height: .38rem;
+}
+.list .state span{
+	float: left;
+	height: .38rem;
+	padding-right: .3rem;
+	font-size: .24rem;
+	line-height: .38rem;
+	color: #727272;
+	margin-right: .4rem;
+}
+.list .state .warnIcon{
+	background: url(../img/warnIcon.png) no-repeat;
+	background-position: right center;
+	background-size: .21rem .22rem;
+}
+/*侧边栏-start*/
+.slideBack{
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 8;
+	background-color: rgba(0,0,0,.2);
+	display: none;
+}
+.slide{
+	position: fixed;
+	right: -86%;
+	top: 0;
+	width: 86%;
+	height: 100%;
+	z-index: 9;
+	background-color: #fff;
+	transition: all 400ms;
+}
+.sildeShow{
+	right: 0;
+}
+.slide .btn{
+	position: absolute;
+	bottom: .4rem;
+	left: 0;
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+}
+.slide .btn span{
+	width: 40%;
+	height: .6rem;
+	font-size: .24rem;
+	line-height: .6rem;
+	text-align: center;
+	cursor: pointer;
+	border-radius: 4px;
+}
+.slide .btn .sure{
+	background-color: #0377fa;
+	color: #fff;
+}
+.slide .btn .cancel{
+	background-color: #ddd;
+	color: #666;
+}
+
+/*侧边栏-end*/

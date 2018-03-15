@@ -1,15 +1,15 @@
-<!-- location.html 	设备位置 -->
+<!-- equipLocation.html 	设备位置 -->
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-widht,initial-scale=1.0,suer-scalable=1.0,maximum-scale=1.0,minimum-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="../css/common.css">
-	<link rel="stylesheet" type="text/css" href="../css/location.css">
+	<link rel="stylesheet" type="text/css" href="../css/equipLocation.css">
 	<script type="text/javascript" src="../js/jquery.min.js"></script>
 	<script type="text/javascript" src="../js/common.js"></script>
 	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=Lelvz6yh1CSHGNNhOmHVPfkp"></script>
-	<script type="text/javascript" src="../js/location.js"></script>
+	<script type="text/javascript" src="../js/equipLocation.js"></script>
 	<title>设备位置</title>
 </head>
 <body class="clearfix">
@@ -19,6 +19,21 @@
     </header>
 	<section>
 		<div id="allmap"></div>
+		<span class="set">
+			<div>
+				<p>设置</p>
+			</div>
+		</span>
+		<div class="setBar">
+			<div>
+				自动
+				<span class="active"></span>
+			</div>
+			<div>
+				手动
+				<span></span>
+			</div>
+		</div>
 	</section>
 </body>
 </html>

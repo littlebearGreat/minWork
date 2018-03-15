@@ -19,5 +19,19 @@ $(function(){
 	map.setCurrentCity("北京"); 
 
 	//开启鼠标滚轮缩放         
-	map.enableScrollWheelZoom(true);     
+	map.enableScrollWheelZoom(true);   
+
+
+
+	// 页面操作
+
+	// 自动手动切换
+	$('.setBar span') .click(function(){
+		$(this).addClass('active').parent().siblings().children('span').removeClass('active');
+	});
+
+	// 点击“设置”，显示设置栏
+	$('.set').click(function(){
+		
+	})
 })

@@ -32,6 +32,18 @@ $(function(){
 
 	// 点击“设置”，显示设置栏
 	$('.set').click(function(){
-		
-	})
+		if ($('.setBar').css('display') === 'none') {
+			$('.setBar').show();
+			$('.setBarBack').show();
+		}else{
+			$('.setBar').hide();
+			$('.setBarBack').hide();
+		};
+	});
+
+	// 点击弹窗遮罩隐藏设置栏
+	$('.setBarBack').click(function(){
+		$(this).hide();
+		$('.setBar').hide();
+	});
 })
